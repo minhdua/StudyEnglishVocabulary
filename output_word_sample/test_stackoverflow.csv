@@ -1,0 +1,934 @@
+About,Trong khoảng
+According,Theo
+Active,Hoạt động
+Actually,Thực ra
+Adjust,Điều chỉnh
+All,Tất cả
+Although,Mặc du
+Angular-specific,Angular-cụ thể
+Answer,Câu trả lời
+Answers,Câu trả lời
+Apr,Tháng tư
+As,Như
+Ask,Hỏi
+Asked,Yêu cầu
+Aug,Tháng 8
+Automatically,Tự động
+Based,Dựa trên
+Be,Là
+Below,Phía dưới
+Bookmark,Dấu trang
+Both,Cả hai
+Boxes,Hộp
+Browse,Duyệt qua
+Browser,Trình duyệt
+By,Bởi
+Cable,Cáp
+Calculate,Tính toán
+Can,Có thể
+Canvas,Tranh sơn dầu
+Causative,Nguyên nhân
+Cavalry,kỵ sĩ
+Chinese,người Trung Quốc
+City,Tp.
+Collaborate,Hợp tác
+Companies,Các công ty
+Compare,Đối chiếu
+Connect,Kết nối
+Copy,Sao chép
+Create,Tạo nên
+Creating,Đang tạo
+DOM-manipulation,Thao tác DOM
+Date,Ngày
+Dec,Tháng mười hai
+Delete,Xóa bỏ
+Deletion,Xóa
+Developer,Nhà phát triển
+Did,Đã làm
+Discard,Bỏ đi
+Do,Làm
+Does,Làm
+Draft,Bản nháp
+Dynamically,Động
+Edge,Cạnh
+Email,E-mail
+End,Kết thúc
+Enforce,Thi hành
+Ensure,Đảm bảo
+Epic,Sử thi
+Every,Mỗi
+Featured,Đặc sắc
+Feb,Tháng hai
+Fill,Lấp đầy
+Finding,Phát hiện
+Font,Nét chữ
+Full-Remote,Điều khiển từ xa đầy đủ
+Function,Chức năng
+HTML-encoding,Mã hóa HTML
+Handle,Xử lý
+Have,Có
+Hence,Vì thế
+Here,Đây
+Hi,Chào
+IE,I E
+If,Nếu
+Initial,Ban đầu
+Input,Đầu vào
+Is,Là
+Jan,tháng một
+Japan,Nhật Bản
+Jesus,Chúa Giêsu
+Jobs,Việc làm
+Jul,Thg 7
+Jun,Tháng sáu
+Just,Chỉ
+Leader,Thủ lĩnh
+Level,Cấp độ
+Linked,Đã liên kết
+Log,Nhật ký
+Logging,Ghi nhật ký
+Looking,Đang nhìn
+Looks,Nhìn
+Magical,Huyền diệu
+Marked,Đã đánh dấu
+Markup,Đánh dấu
+Match,Trận đấu
+Maybe,Có lẽ
+Measuring,Đo lường
+Mentor,Người hướng dẫn
+NICER,TỐT HƠN
+Network,Mạng lưới
+Not,không phải
+Nov,Tháng mười một
+Oct,Tháng 10
+Oldest,Cũ nhất
+Otherwise,Nếu không thì
+Outdated,Lỗi thời
+Outlook,Quan điểm
+Outstanding,Nổi bật
+Overflow,Tràn ra
+PASTE,QUÁ KHỨ
+Parser,Trình phân tích cú pháp
+Passive,Bị động
+Password,Mật khẩu
+Perhaps,Có lẽ
+Placeholders,Trình giữ chỗ
+Please,Xin vui lòng
+Plugin,Cắm vào
+Points,Điểm
+Powered,Cung cấp năng lượng
+Products,Các sản phẩm
+Public,Công cộng
+Quadratically,Bậc hai
+Question,Câu hỏi
+Questions,Câu hỏi
+Quite,Khá
+React,Phản ứng
+Read,Đọc
+Receiving,Nhận
+Registered,Đã đăng ký
+Related,Có liên quan
+Replying,Trả lời
+Report,Báo cáo
+Required,Cần thiết
+Resize,Thay đổi kích thước
+Run,Chạy
+Sans-serif,Sans serif
+Script,Kịch bản
+Scroll,Cuộn
+See,Xem
+Sep,Tháng chín
+Seriously,Nghiêm túc
+Set,Bộ
+Show,Chỉ
+Software,Phần mềm
+Stack,Cây rơm
+Structure,Kết cấu
+Subscribe,Đăng ký
+Subtracting,Trừ đi
+Tags,Thẻ
+Team,Đội
+Teams,Đội
+Telephone,Điện thoại
+Testing,Thử nghiệm
+Text,Bản văn
+Therefore,vì thế
+This,Điều này
+Though,Tuy nhiên
+Thus,Như vậy
+To,Đến
+Try,Thử
+Unfortunately,không may
+Use,Sử dụng
+User,Người dùng
+Viewed,Đã xem
+Votes,Phiếu bầu
+Which,Cái nào
+Width,Chiều rộng
+Wiring,Đấu dây
+With,Với
+Works,Làm
+Would,Sẽ
+Yes,Đúng
+You,Bạn
+Your,Của bạn
+able,có thể
+absolute,tuyệt đối
+accepted,Đã được chấp nhận
+access,truy cập
+according,theo
+accumulating,tích lũy
+accurate,chính xác
+action,hoạt động
+actions,hành động
+activity,Hoạt động
+actual,thực tế
+actually,thực ra
+ad,quảng cáo
+adapted,thích nghi
+added,thêm
+adding,thêm vào
+adjacent,liền kề
+adjust,điều chỉnh
+adjusted,điều chỉnh
+ago,trước đây
+allow,cho phép
+allowed,được phép
+allows,cho phép
+already,đã sẵn sàng
+alternative,thay thế
+angel,Thiên thần
+another,khác
+answer,câu trả lời
+answered,đã trả lời
+answers,câu trả lời
+anybody,bất kỳ ai
+app,ứng dụng
+apparently,hình như
+apple,táo
+applied,đã áp dụng
+approach,tiếp cận
+argue,tranh luận
+arguments,tranh luận
+around,xung quanh
+ask,hỏi
+asked,yêu cầu
+assume,giả định
+assumed,giả định
+assumptions,giả định
+attach,đính kèm
+attached,đính kèm
+attempting,cố gắng
+attention,chú ý
+attenuate,làm suy yếu
+attribute,thuộc tính
+attributes,thuộc tính
+auto,Tự động
+auto-resize,tự động thay đổi kích thước
+automatically,tự động
+available,có sẵn
+average,Trung bình cộng
+avoids,tránh
+awarded,Trao giải thưởng
+azure,màu xanh
+back,trở lại
+background,lý lịch
+badge,huy hiệu
+badges,danh hiệu
+based,dựa trên
+basically,về cơ bản
+begins,bắt đầu
+behaves,cư xử
+behavior,hành vi
+beyond,vượt ra ngoài
+bid,đấu thầu
+bind,trói buộc
+binding,ràng buộc
+blog,Blog
+blood,máu
+blue,màu xanh da trời
+blur,mơ hồ
+body,thân hình
+border,biên giới
+border-box,hộp viền
+bottom,đáy
+bounties,tiền thưởng
+box,cái hộp
+box-radius,bán kính hộp
+box-sizing,đóng hộp
+brace,nẹp
+brand,nhãn hiệu
+break,phá vỡ
+bronze,đồng
+browser,trình duyệt
+browsers,trình duyệt
+buffer,đệm
+bugs,bọ
+built-in,được xây dựng trong
+bullet-proof,chống đạn
+button,cái nút
+buy,mua
+cached,được lưu vào bộ nhớ đệm
+calculate,tính toán
+calculating,tính toán
+calculation,phép tính
+callback,gọi lại
+called,gọi là
+came,đã đến
+canvas,Tranh sơn dầu
+care,quan tâm
+careful,cẩn thận
+carries,mang theo
+case,trường hợp
+catch,nắm lấy
+causative,nhân quả
+caused,gây ra
+cell,ô
+cents,xu
+certain,chắc chắn
+certified,chứng nhận
+chains,dây chuyền
+chance,cơ hội
+change,thay đổi
+changed,đã thay đổi
+changes,thay đổi
+changing,thay đổi
+character,tính cách
+characters,nhân vật
+chat,trò chuyện
+checking,kiểm tra
+checks,Séc
+child,đứa trẻ
+chosen,đã chọn
+chrome,trình duyệt Chrome
+citation,sự trích dẫn
+clarification,làm rõ
+class,lớp học
+cleanest,sạch nhất
+clear,thông thoáng
+clicking,tiếng lách cách
+close,đóng
+code,mã
+code-snippets,đoạn mã
+coding,mã hóa
+color,màu sắc
+combination,sự phối hợp
+combined,kết hợp
+combines,kết hợp
+come,đến
+comes,đến
+comfort,sự thoải mái
+comment,bình luận
+comments,bình luận
+communities,cộng đồng
+community,cộng đồng
+compact,gọn nhẹ
+compared,so
+compatibility,khả năng tương thích
+complex,phức tạp
+computed,tính toán
+contain,Lưu trữ
+container,thùng đựng hàng
+containers,hộp đựng
+contains,chứa đựng
+contents,nội dung
+context,bối cảnh
+contributing,đóng góp
+contributions,đóng góp
+contrived,có nguồn gốc
+controller,người điều khiển
+cookie,bánh quy
+cooking,nấu nướng
+copy,sao chép
+core,cốt lõi
+could,có thể
+countdown,đếm ngược
+courier,chuyển phát nhanh
+coworkers,đồng nghiệp
+create,tạo nên
+created,tạo
+cross-browser,Qua trình duyệt
+curly,quăn
+current,hiện hành
+cursor,con trỏ
+custom,tập quán
+customize,tùy chỉnh
+cut,cắt
+dark,tối
+dead,đã chết
+default,mặc định
+define,định nghĩa
+delegated,ủy quyền
+delete,xóa bỏ
+deleting,xóa
+deletion,sự xóa bỏ
+demo,bản giới thiệu
+dependent,phụ thuộc
+description,sự miêu tả
+deserves,xứng đáng
+desired,mong muốn
+details,chi tiết
+determine,mục đích
+determined,xác định
+determines,xác định
+developer,người phát triển
+developers,các nhà phát triển
+developing,đang phát triển
+different,khác nhau
+differently,khác nhau
+difficult,khó khăn
+dimensions,kích thước
+directive,chỉ thị
+disable,vô hiệu hóa
+disappear,biến mất
+discarded,bỏ đi
+display,trưng bày
+display-name,tên hiển thị
+donating,quyên góp
+done,làm xong
+dragging,kéo lê
+dropped,giảm
+dropping,rơi
+dummy,hình nộm
+dynamically,năng động
+ease-of-use,dễ sử dụng
+easier,dễ dàng hơn
+easily,dễ dàng
+easy,dễ dàng
+edges,các cạnh
+edit,biên tập
+edited,đã chỉnh sửa
+editor,biên tập viên
+effectively,hiệu quả
+elaborate,kỹ lưỡng
+elegant,thanh lịch
+element,thành phần
+elements,các yếu tố
+eligible,đủ điều kiện
+eliminate,loại bỏ
+else,khác
+email,e-mail
+embed,nhúng
+empty,trống
+enabled,được kích hoạt
+encountered,đã gặp
+end,kết thúc
+ensure,đảm bảo
+enter,đi vào
+entering,bước vào
+enters,đi vào
+entry,nhập cảnh
+equals,bằng
+especially,đặc biệt
+etc,Vân vân
+etc.,Vân vân.
+events,sự kiện
+every,mỗi
+exactly,chính xác
+exceeds,vượt quá
+excessively,quá mức
+exchange,đổi
+exhibits,vật trưng bày
+expectation,sự mong đợi
+expected,hy vọng
+experimentally,thực nghiệm
+expression,biểu hiện
+extend,mở rộng
+extending,kéo dài
+extensively,một cách chuyên sâu
+extra,thêm
+fails,thất bại
+fairly,công bằng
+fairy,nàng tiên
+falls,ngã
+false,sai
+far,xa
+features,đặc trưng
+feed,cho ăn
+fetch,lấy
+fiddle,vĩ cầm
+field,cánh đồng
+fields,lĩnh vực
+figuring,hình dung
+filled,lấp đầy
+find,tìm thấy
+fire,ngọn lửa
+fires,đám cháy
+fit,Phù hợp
+fix,sửa chữa
+flagging,cắm cờ
+fleet,hạm đội
+float,Phao nổi
+fluid,dịch
+fluids,chất lỏng
+following,tiếp theo
+font,nét chữ
+font-independent,phông chữ độc lập
+font-size,cỡ chữ
+font-style,kiểu phông chữ
+fonts,phông chữ
+forgotten,bị lãng quên
+form-control,kiểm soát biểu mẫu
+formula,công thức
+forward,ở đằng trước
+found,tìm
+framework,khuôn khổ
+frameworks,khuôn khổ
+friend,bạn bè
+function,chức năng
+gaining,đạt được
+gaming,chơi game
+gaps,khoảng trống
+generic,chung
+gets,được
+getting,nhận được
+ghost,con ma
+given,được
+gold,vàng
+grammatically,về mặt ngữ pháp
+grid,lưới
+group,nhóm
+guest,khách mời
+guitar,đàn ghi ta
+guns,súng
+guy,chàng
+handle,xử lý
+handlers,người xử lý
+handling,sự điều khiển
+handy,tiện dụng
+hard-coded,mã hóa cứng
+height,Chiều cao
+hidden,ẩn
+higher,cao hơn
+hindering,cản trở
+home-page,trang chủ
+huge,khổng lồ
+id,Tôi
+ideal,lý tưởng
+ids,id
+ignores,bỏ qua
+image,hình ảnh
+immediately,ngay
+implemented,thực hiện
+improved,cải thiện
+improvement,cải tiến
+inappropriate,không thích hợp
+increase,tăng
+indeed,thật
+ineligible,không đủ điều kiện
+information,thông tin
+initial,ban đầu
+inline,nội tuyến
+inline-block,chặn Nội tuyến
+input,đầu vào
+input-element,yếu tố đầu vào
+inputs,đầu vào
+inserted,đưa vào
+inside,phía trong
+instead,thay thế
+intelligent,thông minh
+intended,dự định
+introduced,giới thiệu
+invisible,vô hình
+involve,liên quan
+involves,liên quan đến
+issue,vấn đề
+issues,vấn đề
+italic,in nghiêng
+jobs,việc làm
+keeping,duy trì
+key,Chìa khóa
+knowledge,hiểu biết
+knows,biết
+label,nhãn
+lacks,thiếu
+larger,lớn hơn
+lasers,tia laze
+later,một lát sau
+layout,bố trí
+least,ít nhất
+left,trái
+length,chiều dài
+let,để cho
+letter,lá thư
+letter-spacing,khoảng cách giữa các chữ cái
+level,cấp độ
+licensed,được cấp phép
+liked,đã thích
+limited,hạn chế
+line,hàng
+line-height,chiều cao giữa các dòng
+link,liên kết
+linked,liên kết
+list,danh sách
+listen,nghe
+listens,lắng nghe
+load,tải
+log,khúc gỗ
+login-link,liên kết đăng nhập
+long-lived,sống lâu
+looking,đang nhìn
+lost,mất đi
+lot,nhiều
+lots,rất nhiều
+loves,yêu
+m-address,địa chỉ m
+manually,thủ công
+margin,lề
+match,trận đấu
+matrix,ma trận
+matter,vấn đề
+mean,nghĩa là
+means,có nghĩa
+measure,đo lường
+measured,đo lường
+measurement,đo đạc
+measurements,đo
+mentioned,đề cập
+menu,thực đơn
+messy,lộn xộn
+methods,phương pháp
+might,có thể
+mileage,số dặm
+min-width,chiều rộng tối thiểu
+mind,lí trí
+minimum,tối thiểu
+misinterpreting,hiểu sai
+mobile-below-question,di động-bên dưới câu hỏi
+modification,sự sửa đổi
+modifying,sửa đổi
+mono,bệnh tăng bạch cầu đơn nhân
+mono-sized,đơn kích thước
+months,tháng
+move,di chuyển
+multiple,bội số
+multiplied,nhân lên
+multiplying,nhân lên
+my-input,đầu vào của tôi
+narrower,hẹp hơn
+natural,tự nhiên
+needed,cần thiết
+needs,nhu cầu
+network,mạng lưới
+never,không bao giờ
+new,Mới
+nice-looking,ưa nhìn
+nicely,độc đáo
+node,nút
+none,không ai
+normal,bình thường
+noticed,nhận thấy
+notifications,thông báo
+noting,lưu ý
+nowadays,ngày nay
+null,vô giá trị
+number,con số
+numbers,con số
+numeric,số
+occasion,dịp
+occur,xảy ra
+oceans,đại dương
+omnivore,động vật ăn tạp
+optimal,tối ưu
+orbit,quỹ đạo
+others,khác
+overflowing,tràn ra
+overkill,quá mức cần thiết
+pad,tập giấy
+padding,đệm lót
+painter,họa sĩ
+painting,bức vẽ
+paragraph,đoạn văn
+parse,phân tích cú pháp
+passive,thụ động
+past,quá khứ
+paste,dán
+pasted,dán
+pasting,dán
+path,con đường
+perfectly,hoàn hảo
+personal,cá nhân
+pick,hái
+piece,cái
+pixels,điểm ảnh
+placeholder,trình giữ chỗ
+plain,trơn
+plain-field,đồng bằng
+plan,kế hoạch
+planning,lập kế hoạch
+players,người chơi
+please,xin vui lòng
+plugin,cắm vào
+point,điểm
+positioning,định vị
+possible,khả thi
+posted,đã đăng
+postfix,hậu tố
+potential,tiềm năng
+precision,độ chính xác
+prefer,thích hơn
+prefers-color-scheme,ưu tiên phối màu
+pressed,ép
+prevents,ngăn cản
+principle,nguyên tắc
+privacy,riêng tư
+private,riêng tư
+probably,có lẽ
+problem,vấn đề
+program,chương trình
+properties,tính chất
+protocols,giao thức
+provided,cung cấp
+provides,cung cấp
+ps-relative,ps-họ hàng
+pure,nguyên chất
+purpose,mục đích
+put,đặt
+question,câu hỏi
+question-pages,trang câu hỏi
+questions,câu hỏi
+quite,khá
+rapidly,nhanh chóng
+reaches,đạt tới
+react,phản ứng
+reactive,phản ứng
+read,đọc
+reader,người đọc
+readjust,điều chỉnh lại
+reads,đọc
+red,đỏ
+references,người giới thiệu
+reflow,chỉnh lại
+regarding,về
+registered,đã đăng ký
+related,liên quan
+relation,quan hệ
+relative,quan hệ
+relevant,liên quan, thích hợp
+reliable,đáng tin cậy
+remove,tẩy
+rendered,kết xuất
+rendering,kết xuất
+reopen,mở lại
+replace,thay thế
+report-ad,báo cáo-quảng cáo
+represents,đại diện
+reputation,uy tín
+require,yêu cầu
+requires,đòi hỏi
+research,nghiên cứu
+resize,thay đổi kích thước
+resizing,thay đổi kích thước
+resizing-input,thay đổi kích thước-đầu vào
+respectively,tương ứng
+responding,đáp lại
+responsive,phản ứng nhanh nhẹn
+rest,nghỉ ngơi
+result,kết quả
+results,các kết quả
+retains,giữ lại
+retrieving,lấy lại
+returning,trở về
+returns,trả lại
+rev,vòng quay
+rid,thoát khỏi
+root,nguồn gốc
+round,tròn
+rule,qui định
+run,chạy
+s-description,s-mô tả
+s-label,nhãn s
+said,nói
+sandbox,hộp cát
+sans-serif,sans serif
+saved,lưu lại
+say,Nói
+scales,quy mô
+scaling,mở rộng quy mô
+script,kịch bản
+scrolling,cuộn
+scrolls,cuộn giấy
+sea,biển
+search,Tìm kiếm
+see,xem
+seems,hình như
+seen,đã xem
+sequential,tuần tự
+serious,nghiêm trọng
+set,bộ
+sets,bộ
+setting,cài đặt
+setup,thiết lập
+shorthand,tốc ký
+show,chỉ
+showing,trưng bày
+shown,cho xem
+shows,trình diễn
+shrink,co lại
+sibling,anh chị em
+silver,bạc
+simple,đơn giản
+simpler,đơn giản hơn
+simplest,đơn giản nhất
+simplicity,sự đơn giản
+simply,đơn giản
+since,từ
+singers,ca sĩ
+singularly,đặc biệt
+sites,các trang web
+size,kích thước
+sizes,kích thước
+slots,khe cắm
+snippet,đoạn trích
+snippets,đoạn trích
+software,phần mềm
+solid,chất rắn
+solution,giải pháp
+solutions,các giải pháp
+solve,gỡ rối
+solved,đã giải quyết
+something,cái gì đó
+sounds,âm thanh
+space,không gian
+space-based,dựa trên không gian
+spaces,không gian
+spacing,khoảng cách
+span,nhịp
+specific,riêng
+speed,tốc độ
+stack,cây rơm
+stands,đứng
+starts,bắt đầu
+statements,các câu lệnh
+stats,số liệu thống kê
+stop,dừng lại
+straight,thẳng
+strange,lạ lùng
+strength,sức mạnh
+strictly,nghiêm ngặt
+strike,đình công
+string,chuỗi
+structured,có cấu trúc
+styles,phong cách
+styling,phong cách
+submits,nộp
+subscribe,đăng ký
+suffice,đủ
+supporting,hỗ trợ
+supports,ủng hộ
+supposed,được cho là
+sure,chắc chắn rồi
+surprised,ngạc nhiên
+switch,công tắc điện
+switching,chuyển đổi
+symbol,Biểu tượng
+table,bàn
+tag,nhãn
+tag-non-reportable,thẻ-không thể báo cáo
+tag-pages,trang thẻ
+tag-reportable,tag-có thể báo cáo
+tag-sponsorship,tài trợ thẻ
+tagged,được gắn thẻ
+tags,thẻ
+taking,đang lấy
+tale,câu chuyện
+talent,năng lực
+talent-conversion-tracking,theo dõi chuyển đổi tài năng
+tech,công nghệ
+technical,kỹ thuật
+technologists,nhà công nghệ
+temporary,tạm thời
+terms,điều kiện
+tested,thử nghiệm
+text,bản văn
+text-transform,chuyển đổi văn bản
+text-transforms,chuyển đổi văn bản
+thing,Điều
+though,Tuy nhiên
+thought,nghĩ
+three-vote,ba phiếu bầu
+thus,do đó
+times,lần
+tiny,nhỏ bé
+tip,tiền boa
+tips,lời khuyên
+title,tiêu đề
+toolkit,bộ công cụ
+top,hàng đầu
+track,theo dõi
+tracker,người theo dõi
+traction,lực kéo
+transparent,trong suốt
+travel,du lịch
+trees,cây
+trims,đồ trang trí
+true,thật
+try,thử
+trying,cố gắng
+tweak,chỉnh sửa
+type,kiểu
+typed,đã đánh máy
+ugly,xấu xí
+unclear,không rõ
+undefined,chưa xác định
+understanding,hiểu biết
+unit,đơn vị
+units,các đơn vị
+unlike,không giống
+unlikely,không chắc
+unreliable,không đáng tin cậy
+unresolvable,không thể giải quyết được
+update,cập nhật
+updates,cập nhật
+updating,đang cập nhật
+use,sử dụng
+used,đã sử dụng
+useful,hữu ích
+useless,vô ích
+user,người dùng
+users,người dùng
+uses,sử dụng
+using,sử dụng
+validation,Thẩm định
+validations,xác nhận
+value,giá trị
+values,giá trị
+van,xe van
+variable,Biến đổi
+version,phiên bản
+versions,phiên bản
+vertical-align,căn chỉnh theo chiều dọc
+via,thông qua
+visibility,hiển thị
+void,vô hiệu
+voted,bình chọn
+vs.,so với
+wanted,muốn
+way,đường
+weight,cân nặng
+whatever,bất cứ điều gì
+white-space,khoảng trắng
+white-spaces,khoảng trắng
+whole,toàn bộ
+wide,rộng
+wider,rộng hơn
+width,chiều rộng
+window,cửa sổ
+wing,canh
+within,trong
+without,không có
+words,từ ngữ
+worked,đã làm việc
+works,làm
+worldwide,trên toàn thế giới
+worth,đáng giá
+would,sẽ
+wrapper,vỏ bánh
+write,viết
+writing,viết
+wrong,Sai lầm
+wrote,đã viết
+yes,Đúng
+yet,chưa
+zero,số không
+zone,khu

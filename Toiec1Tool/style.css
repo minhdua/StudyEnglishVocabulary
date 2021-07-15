@@ -1,0 +1,104 @@
+.cell{
+	border: 1px solid;
+}
+
+.center{
+	text-align:center;
+}
+.dash{
+	border: 1px solid black;
+	margin-top: 16px;
+	margin-bottom: 16px;
+}
+.hidden{
+	display:none;
+}
+#error,.error-row{
+	color:red;
+}
+#Pre-button,#Next-button{
+	width:100px;
+	margin:16px;
+}
+#random-button{
+	margin-top:16px;
+}
+.cover{
+	margin-left:16px;
+}
+.practice-area{
+	margin-top:16px;
+}
+label{
+	font-weight:bold;
+}
+.error{
+	color:red;
+}
+.red{
+	color:red;
+}
+.errorVal{
+	border:1px solid red;
+}
+.green{
+	color:green;
+}
+.yellow{
+	color:yellow;
+}
+.gray{
+	color:gray;
+}
+#No-info,#English-info,#Vietnamese-Info,#Pronounce-info{
+	font-size:14pt;
+	color:green;
+}
+
+.cross {
+    position: relative;
+    display: inline-block;
+	color:gray;
+	white-space: pre;
+}
+.cross::before, .cross::after {
+    content: '';
+    width: 100%;
+    position: absolute;
+    right: 0;
+    top: 50%;
+}
+.cross::before {
+    border-bottom: 2px solid red;
+    -webkit-transform: skewY(-10deg);
+    transform: skewY(-10deg);
+}
+.cross::after {
+    border-bottom: 2px solid red;
+    -webkit-transform: skewY(10deg);
+    transform: skewY(10deg);
+}
+
+button{
+	box-sizing: border-box;
+    margin: 0;
+    font-family: inherit;
+    text-transform: none;
+	display: inline-block;
+    font-weight: 400;
+    line-height: 1.5;
+    text-align: center;
+    text-decoration: none;
+    vertical-align: middle;
+    user-select: none;
+    border: 1px solid transparent;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    border-radius: .25rem;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    cursor: pointer;
+}
+
+.study-word{
+	width:100%;
+}
