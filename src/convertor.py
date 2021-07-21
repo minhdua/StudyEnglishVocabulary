@@ -2,7 +2,7 @@ from datetime import datetime
 
 from src.constant import Constant
 from src.dto import GeneralInfor, List20UnitLastest, VocabularyDTO
-from src.model import FileImport, Typing, Unit, Vocabulary
+from src.model import Example, FileImport, Typing, Unit, Vocabulary
 from src.stuff_util import get_or_default
 
 
@@ -82,3 +82,10 @@ class FileImportConvertor(BaseConvertor):
 
     def from_cursor(self,cursor):
         return Unit(cursor[0],cursor[1],cursor[2],cursor[3])
+
+class ExampleConvertor(BaseConvertor):
+    def __init__(self):
+        super().__init__(Example())
+
+    def from_cursor(self,cursor):
+        return Example(cursor[0],cursor[1],cursor[2],cursor[3],cursor[4],cursor[5])

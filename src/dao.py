@@ -3,12 +3,12 @@ from copy import deepcopy
 
 from src.connector import Connector
 from src.constant import Constant
-from src.convertor import (FileImportConvertor, GeneralInforConvertor,
+from src.convertor import (ExampleConvertor, FileImportConvertor, GeneralInforConvertor,
                            List20UnitLastestConvertor, TypingConvertor,
                            UnitConvertor, VocabularyConvertor,
                            VocabularyDTOConvertor)
 from src.dto import GeneralInfor
-from src.model import FileImport, Typing, Unit, Vocabulary
+from src.model import Example, FileImport, Typing, Unit, Vocabulary
 from src.query_util import QueryBuilder
 from src.stuff_util import Browser, get_or_default
 
@@ -243,6 +243,21 @@ class FileImportDao(BaseDao):
                 self.save()
             else:
                 self.update(self.fileimport)
+
+class ExampleDao(BaseDao):
+    def __init__(self,example=None):
+        self.example = get_or_default(example,Example())
+        super().__init__(self.example,ExampleConvertor(),['english','example'])
+
+    def get_by_english(self,english):
+            example = deepcopy(self.example)
+            example.english = english
+            return self.get_by_custom_query(example,['english'])
+
+    def delete_by_example(self,sentence):
+        example = deepcopy(self.example)
+        example.example = sentence
+        return self.delete_by_custom_query(example,['english','example'])
 
 class StatisticsDao():
     

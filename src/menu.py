@@ -97,12 +97,12 @@ class Properties(object):
 
 class ItemInfo(object):
 
-    def __init__(self,key='>>>',value='',color_key=Color.DEFAULT,color_value=Color.DEFAULT):
+    def __init__(self,key='>>>',value='',color_key=Color.DEFAULT,color_value=Color.DEFAULT,inline_flag=False):
         self.key = key
         self.value = value
         self.color_key = color_key
         self.color_value = color_value
-
+        self.inline_flag = inline_flag
     def colorize_key(self):
         return high_light(self.key,self.color_key)
 
@@ -162,6 +162,7 @@ class InforMenu(object):
         self.find_max_distance()
         self.margin_left = Properties().margin_left
         self.margin_top = Properties().margin_top
+        self.item_flag = {}
         self.format_all_item()
 
     def update_max_distance(self,item):
@@ -176,6 +177,7 @@ class InforMenu(object):
         return ' '*self.margin_left + item.format(self.max_distance)
 
     def add_format_item(self,item):
+        self.item_flag[self.format_item(item)] = item.inline_flag
         self.item_formart.append(self.format_item(item))
     
     def format_all_item(self):
@@ -207,7 +209,10 @@ class InforMenu(object):
         if(len(self.item_formart) > 0):
             self.println()
             for item in self.get_item_format():
-                print(item)
+                if(self.item_flag[item]):
+                    print(item,end=' - ')
+                else:
+                    print(item)
             self.println()
             self.exit_message()
 

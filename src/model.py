@@ -35,16 +35,16 @@ class Typing(BaseModel):
     '''
     this class is Typing model
     '''
-    def __init__(self,id=None, english='', right_times=0, wrong_times=0, pronounce='', description='', synonymous='', antonym='', homonym='', units_contain=None,vietnamese_studied=None, date_create=None, date_last_update=None):
+    def __init__(self,id=None, english='', right_times=0, wrong_times=0, pronounce='', description='', synonymous=None, antonym=None, homonym=None, units_contain=None,vietnamese_studied=None, date_create=None, date_last_update=None):
         self.english=english
         self.right_times=str(right_times)
         self.wrong_times=str(wrong_times)
         self.pronounce=get_or_default(pronounce,cover_slash(eng_to_ipa.convert(english)))
         if(description):
             self.description= description.replace('"','\\"')
-        self.synonymous=synonymous
-        self.antonym=antonym
-        self.homonym=homonym
+        self.synonymous=get_or_default(synonymous,'')
+        self.antonym=get_or_default(antonym,'')
+        self.homonym=get_or_default(homonym,'')
         self.units_contain=units_contain
         self.vietnamese_studied = vietnamese_studied
         super().__init__(id,date_create,date_last_update)
@@ -99,5 +99,26 @@ class FileImport(BaseModel):
             .format(
                 self.id,
                 self.file_name,
+                self.date_create,
+                self.date_last_update)
+
+class Example(BaseModel):
+    
+    '''
+    this class is Unit model
+    '''
+    def __init__(self,id=None, english=None, translate=None, example=None, date_create=None, date_last_update=None):
+        self.english=english
+        self.translate=translate
+        self.example=example
+        super().__init__(id,date_create,date_last_update)
+
+    def __str__(self):
+        return '{0}; {1}; {2}; {3}; {4}; {5}'\
+            .format(
+                self.id,
+                self.english,
+                self.translate,
+                self.example,
                 self.date_create,
                 self.date_last_update)
