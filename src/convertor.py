@@ -2,7 +2,7 @@ from datetime import datetime
 
 from src.constant import Constant
 from src.dto import GeneralInfor, List20UnitLastest, VocabularyDTO
-from src.model import Example, FileImport, Typing, Unit, Vocabulary
+from src.model import Antonym, Example, FileImport, Synonymous, Typing, Unit, Vocabulary
 from src.stuff_util import get_or_default
 
 
@@ -73,7 +73,7 @@ class VocabularyDTOConvertor(BaseConvertor):
         super().__init__(VocabularyDTO())
 
     def from_cursor(self,cursor):
-        return VocabularyDTO(cursor[0],cursor[1],cursor[2],cursor[3],cursor[4],cursor[5],cursor[6],cursor[7],cursor[8],cursor[9],cursor[10],cursor[11])
+        return VocabularyDTO(cursor[0],cursor[1],cursor[2],cursor[3],cursor[4],cursor[5],cursor[6],cursor[7],cursor[8],cursor[9],cursor[10],cursor[11],cursor[12])
 
 class FileImportConvertor(BaseConvertor):
 
@@ -89,3 +89,18 @@ class ExampleConvertor(BaseConvertor):
 
     def from_cursor(self,cursor):
         return Example(cursor[0],cursor[1],cursor[2],cursor[3],cursor[4],cursor[5])
+
+
+class SynonymousConvertor(BaseConvertor):
+    def __init__(self):
+        super().__init__(Synonymous())
+
+    def from_cursor(self,cursor):
+        return Synonymous(cursor[0],cursor[1],cursor[2],cursor[3],cursor[4])
+
+class AntonymConvertor(BaseConvertor):
+    def __init__(self):
+        super().__init__(Antonym())
+
+    def from_cursor(self,cursor):
+        return Antonym(cursor[0],cursor[1],cursor[2],cursor[3],cursor[4])

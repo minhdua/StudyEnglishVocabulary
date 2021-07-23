@@ -3,12 +3,12 @@ from copy import deepcopy
 
 from src.connector import Connector
 from src.constant import Constant
-from src.convertor import (ExampleConvertor, FileImportConvertor, GeneralInforConvertor,
-                           List20UnitLastestConvertor, TypingConvertor,
+from src.convertor import (AntonymConvertor, ExampleConvertor, FileImportConvertor, GeneralInforConvertor,
+                           List20UnitLastestConvertor, SynonymousConvertor, TypingConvertor,
                            UnitConvertor, VocabularyConvertor,
                            VocabularyDTOConvertor)
 from src.dto import GeneralInfor
-from src.model import Example, FileImport, Typing, Unit, Vocabulary
+from src.model import Antonym, Example, FileImport, Synonymous, Typing, Unit, Vocabulary
 from src.query_util import QueryBuilder
 from src.stuff_util import Browser, get_or_default
 
@@ -190,26 +190,10 @@ class TypingDao(BaseDao):
             self.query.set_object(Typing(english=english))
             self.update_extend()
             self.save()
-            try:
-                def threaded_function():
-                    browser = Browser(english)
-                    info_extend = browser.search()
-                    self.typing.pronounce= info_extend.pronounce
-                    self.typing.description= info_extend.description
-                    self.typing.synonymous= info_extend.relation_info.synonymous
-                    self.typing.antonym= info_extend.relation_info.antonym
-                    self.save()
-                thread = threading.Thread(target = threaded_function)
-                thread.start()
-            except :
-                pass
         else:
             self.typing = typing
-            self.typing.homonym = self.loader_homonym()
-            self.typing.units_contain = self.loader_units_contain()
-            self.typing.vietnamese_studied = self.loader_vietnamese_studied()
+            self.update_extend()
             self.update(self.typing)
-
         return self.typing
 
 class UnitDao(BaseDao):
@@ -283,3 +267,24 @@ class StatisticsDao():
         sql = self.query.select_vdto_by_unit_builder(unit_code)
         return self.vocabulary_dto_convertor.list_copy_from_list_cursor(self.conn.fetchall(sql))
 
+class SynonymousDao(BaseDao):
+
+    def __init__(self,synonymous=None):
+        self.synonymous = get_or_default(synonymous,Synonymous())
+        super().__init__(self.synonymous,SynonymousConvertor(),['english','syn_english'])
+
+    def get_by_english(self,english):
+            synonymous = deepcopy(self.synonymous)
+            synonymous.english = english
+            return self.get_by_custom_query(synonymous,['english'])
+
+class AntonymDao(BaseDao):
+    def __init__(self,antonym=None):
+        self.antonym = get_or_default(antonym,Antonym())
+        super().__init__(self.antonym,AntonymConvertor(),['english','an_english'])
+
+    def get_by_english(self,english):
+            antonym = deepcopy(self.antonym)
+            antonym.english = english
+            return self.get_by_custom_query(antonym,['english'])
+        

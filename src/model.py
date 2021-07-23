@@ -20,7 +20,7 @@ class Vocabulary(BaseModel):
     '''
         vocabulary model 
     '''
-    def __init__(self,id=None,english = '',vietnamese = '',type_word='',unit_code = '',date_create=None,date_last_update=None):
+    def __init__(self,id=None,english = '',vietnamese = 'NoMean',type_word='',unit_code = '',date_create=None,date_last_update=None):
         self.english = english
         self.vietnamese = vietnamese
         self.type_word = get_or_default(type_word,'Undefined')
@@ -120,5 +120,41 @@ class Example(BaseModel):
                 self.english,
                 self.translate,
                 self.example,
+                self.date_create,
+                self.date_last_update)
+
+class Synonymous(BaseModel):
+    '''
+    this class is Synonymous model
+    '''
+    def __init__(self,id=None, english=None, syn_english=None, date_create=None, date_last_update=None):
+        self.english=english
+        self.syn_english=syn_english
+        super().__init__(id,date_create,date_last_update)
+
+    def __str__(self):
+        return '{0}; {1}; {2}; {3}; {4}'\
+            .format(
+                self.id,
+                self.english,
+                self.syn_english,
+                self.date_create,
+                self.date_last_update)
+
+class Antonym(BaseModel):
+    '''
+    this class is SynonymoAntonymus model
+    '''
+    def __init__(self,id=None, english=None, an_english=None, date_create=None, date_last_update=None):
+        self.english=english
+        self.an_english=an_english
+        super().__init__(id,date_create,date_last_update)
+
+    def __str__(self):
+        return '{0}; {1}; {2}; {3}; {4}'\
+            .format(
+                self.id,
+                self.english,
+                self.an_english,
                 self.date_create,
                 self.date_last_update)

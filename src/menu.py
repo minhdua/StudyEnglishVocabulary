@@ -99,15 +99,23 @@ class ItemInfo(object):
 
     def __init__(self,key='>>>',value='',color_key=Color.DEFAULT,color_value=Color.DEFAULT,inline_flag=False):
         self.key = key
-        self.value = value
+        self.value = str(value)
         self.color_key = color_key
         self.color_value = color_value
         self.inline_flag = inline_flag
-    def colorize_key(self):
-        return high_light(self.key,self.color_key)
+        self.margin_left = Properties().margin_left
+
+    def colorize_key(self,key=None):
+        if(not key):
+            return high_light(self.key,self.color_key)
+        return high_light(key,self.color_key)
 
     def colorize_value(self):
-        return high_light(self.value,self.color_value)
+        item_values = self.value.split('\n')
+        values = []
+        for item in item_values:
+            values.append(high_light(item,self.color_value))
+        return '\n'.join(values)
 
     def format_key(self):
         return '[{}].'.format(self.colorize_key())
@@ -116,7 +124,13 @@ class ItemInfo(object):
         return '{}'.format(self.colorize_value())
 
     def format(self,distance):
-        return str('{:'+str(distance*2)+'} {}').format(self.format_key(),self.format_value())
+        item_values = self.format_value().split('\n')
+        values = []
+        key = self.format_key()
+        for item in item_values:
+            values.append(' '*self.margin_left + str('{:'+str(distance*2+5)+'} {}').format(key,item))
+            key = self.colorize_key(' ')
+        return '\n'.join(values)
 
 class Option(object):
 
@@ -174,7 +188,7 @@ class InforMenu(object):
             self.update_max_distance(item)
 
     def format_item(self,item):
-        return ' '*self.margin_left + item.format(self.max_distance)
+        return item.format(self.max_distance)
 
     def add_format_item(self,item):
         self.item_flag[self.format_item(item)] = item.inline_flag
