@@ -2,9 +2,10 @@ import uuid
 from datetime import datetime
 
 import eng_to_ipa
+from nltk.stem.wordnet import WordNetLemmatizer
 
 from src.constant import Constant
-from src.stuff_util import cover_slash, get_or_default
+from src.stuff_util import cover_slash, get_notation, get_or_default
 
 
 class BaseModel:
@@ -20,16 +21,19 @@ class Vocabulary(BaseModel):
     '''
         vocabulary model 
     '''
-    def __init__(self,id=None,english = '',vietnamese = 'NoMean',type_word='',unit_code = '',date_create=None,date_last_update=None):
+    def __init__(self,id=None,english = '',vietnamese = 'NoMean',type_word=None,unit_code = '',stem=None,date_create=None,date_last_update=None):
         self.english = english
         self.vietnamese = vietnamese
         self.type_word = get_or_default(type_word,'Undefined')
         self.unit_code = unit_code
+        lemmatizer = WordNetLemmatizer()
+        my_stem = lemmatizer.lemmatize(self.english,pos=get_notation(self.type_word))
+        self.stem = get_or_default(stem,my_stem)
         super().__init__(id,date_create,date_last_update)
 
     def __str__(self):
-        return '({0}; {1}; {2}; {3}; {4}; {5}; {6})'\
-        .format(self.id,self.english,self.vietnamese,self.unit_code,self.type_word,self.date_create,self.date_last_update)
+        return '({0}; {1}; {2}; {3}; {4}; {5}; {6}; {7})'\
+        .format(self.id,self.english,self.vietnamese,self.unit_code,self.type_word, self.stem, self.date_create,self.date_last_update)
 
 class Typing(BaseModel):
     '''
@@ -40,8 +44,7 @@ class Typing(BaseModel):
         self.right_times=str(right_times)
         self.wrong_times=str(wrong_times)
         self.pronounce=get_or_default(pronounce,cover_slash(eng_to_ipa.convert(english)))
-        if(description):
-            self.description= description.replace('"','\\"')
+        self.description = get_or_default(description,'')
         self.synonymous=get_or_default(synonymous,'')
         self.antonym=get_or_default(antonym,'')
         self.homonym=get_or_default(homonym,'')

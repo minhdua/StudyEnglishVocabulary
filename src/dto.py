@@ -10,11 +10,12 @@ class ExtendInfo:
         self.relation_info=relation_info
 
 class VocabularyDTO:
-    def __init__(self,english=None,vietnamese=None,type_word=None,unit_code=None,right_times=0,wrong_times=0,pronounce=None,description=None,synonymous=None,antonym=None,homonym=None,units_contain=None,vietnamese_studied=None):
+    def __init__(self,english=None,vietnamese=None,type_word=None,unit_code=None,stem=None,right_times=0,wrong_times=0,pronounce=None,description=None,synonymous=None,antonym=None,homonym=None,units_contain=None,vietnamese_studied=None):
             self.english = english
             self.vietnamese = vietnamese
             self.type_word = type_word
             self.unit_code = unit_code
+            self.stem = stem
             self.right_times = right_times
             self.wrong_times = wrong_times
             self.total_times_typing = self.right_times + self.wrong_times
@@ -31,21 +32,23 @@ class VocabularyDTO:
             'vietnamese = {1},\n'+\
             'type_word = {2},\n'+\
             'unit_code = {3},\n'+\
-            'right_times = {4},\n'+\
-            'wrong_times = {5},\n'+\
-            'total_times_typing = {6},\n'+\
-            'pronounce = {7},\n'+\
-            'description ={8},\n'+\
-            'synonymous = {9},\n'+\
-            'antonym = {10},\n'+\
-            'homonym = {11},\n'+\
-            'units_contain = {12},\n'+\
-            'vietnamese_studied = {13},\n'
+            'stem = {4},\n'\
+            'right_times = {5},\n'+\
+            'wrong_times = {6},\n'+\
+            'total_times_typing = {7},\n'+\
+            'pronounce = {8},\n'+\
+            'description ={9},\n'+\
+            'synonymous = {10},\n'+\
+            'antonym = {11},\n'+\
+            'homonym = {12},\n'+\
+            'units_contain = {13},\n'+\
+            'vietnamese_studied = {14},\n'
         return result.format(
                 self.english,
                 self.vietnamese,
                 self.type_word,
                 self.unit_code,
+                self.stem,
                 self.right_times,
                 self.wrong_times,
                 self.total_times_typing,

@@ -2,6 +2,7 @@ import urllib.request
 
 import eng_to_ipa
 from bs4 import BeautifulSoup
+from nltk.corpus.reader.wordnet import ADJ, ADV, NOUN, VERB
 
 from src.constant import Color
 from src.dto import ExtendInfo, RelationInfo
@@ -15,9 +16,18 @@ def get_or_default(this,that):
 def cover_slash(word):
     return '/'+word + '/'
 
-def high_light(word,color):
-        return color + str(word) + Color.DEFAULT
-
+def high_light(word,color,color_default=Color.DEFAULT):
+        return color + str(word) + color_default
+        
+def get_notation(word):
+        if(word.capitalize().startswith('Adjective')):
+            return ADJ
+        elif(word.capitalize().startswith('Adverb')):
+            return ADV
+        elif(word.capitalize().startswith('Verb')):
+            return VERB
+        else:
+            return NOUN
 
 class Browser:
     def pronounce(self):

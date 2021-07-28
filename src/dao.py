@@ -1,6 +1,8 @@
 import threading
 from copy import deepcopy
 
+from nltk.stem.wordnet import WordNetLemmatizer
+
 from src.connector import Connector
 from src.constant import Constant
 from src.convertor import (AntonymConvertor, ExampleConvertor, FileImportConvertor, GeneralInforConvertor,

@@ -1,37 +1,116 @@
-﻿TOIECARUNIT06,Toiec A Reading Unit 6
-enjoy Ving,tận hưởng việc làm gì đó
-consider Ving,xem xét, cân nhắc việc gì
-mind Ving,ngại làm gì
-suggest Ving,gợi ý làm gì
-quit Ving,bỏ làm gì
-admit Ving,thừa nhận đã làm gì
-discontinue Ving,dừng làm gì đó
-recommend Ving,đề xuất làm gì đó
-avoid Ving,tránh làm gì đó
-raise fund,gây quỹ
-productivity,năng suất
-defective machine,máy móc hỏng
-remember to V,nhớ phải làm gì
-remember Ving,nhớ đã làm gì
-forget Ving,quên đã làm gì
-forget to V,quên phải làm gì
-try Ving,thử làm gì
-try to V,cố gắng làm gì
-be used to Ving / be accustomed to Ving,quen với cái gì đó
-in addtion to Ving,bên cạnh cái gì đó
-prior to Ving,trước
-object to Ving,phản đối điều gì đó
-be devoted / committed to Ving,hết lòng, tận tâm vì điều gì đó
-contribute to Ving,cống hiến, đóng góp cho
-be busy Ving,bận làm gì
-be worth Ving,đáng làm gì đó
-have difficulty/trouble Ving,gặp khó khăn khi làm gì đó
-can't help/stand Ving,không chịu đựng nổi cái gì đó
-enhance,nâng cao
-work performance,năng suất làm việc
-relocate,chuyển địa điểm
-regarding = about,về
-sales = revenue,doanh thu
-resign,từ chức
-praise,ca ngợi
-debate,tranh luận
+﻿A Chip off the Old Block,ngÆ°á»i cÃ³ hÃ nh Ä‘á»™ng,,
+A red letter day,NgÃ y Ä‘Ã¡ng nhá»›,,
+Admire,v. /É™d'maiÉ™/khÃ¢m phá»¥c,,
+adopt child,/É™ËˆdÉ‘Ëpt tÊƒaÉªld/Con nuÃ´i,,
+adopted father,/É™ËˆdÉ‘ËptÉªdËˆfÉ‘ËÃ°É™r/Cha nuÃ´i,,
+adopted mother,/É™ËˆdÉ‘ËptÉªdËˆmÊŒÃ°É™r/Máº¹ nuÃ´i,,
+adoptive parents,cha máº¹ nuÃ´i,,
+adoptive son/daughter,con trai/gÃ¡i nuÃ´i,,
+Air one's dirty laundry in public,váº¡ch Ã¡o cho ngÆ°á»i xem lÆ°ng,,
+Ancestor,/ËˆÃ¦nsestÉ™(r)/Ã´ng bÃ ,,
+Apple doesn't fall far from tree,Con nhÃ  tÃ´ng,,
+aunt,cÃ´/dÃ¬...,,
+Bang for the buck,Ä‘Ã¡ng Ä‘á»“ng tiá»n bÃ¡t gáº¡o,,
+Blood is thicker than water,Má»™t giá»t mÃ¡u Ä‘Ã o hÆ¡n ao nÆ°á»›c lÃ£,,
+Break one's neck,nai lÆ°ng ra lÃ m cáº­t lá»±c,,
+Bring home the bacon,kiáº¿m tiá»n nuÃ´i gia Ä‘Ã¬nh,,
+brother,anh trai,,
+brother-in-law,anh/em rá»ƒ,,
+Buckle down,lÃ m viá»‡c nghiÃªm tÃºc,,
+Cleanliness is next to godliness,NhÃ  sáº¡ch thÃ¬ mÃ¡t,,
+Close to,ThÃ¢n thiáº¿t vá»›i ai Ä‘Ã³,,
+Come hell or high water,dÃ¹ cÃ³ chuyá»‡n gÃ¬ xáº£y ra Ä‘i chÄƒng ná»¯a,,
+cousin,a/c/e há»,,
+daughter,con gÃ¡i,,
+daughter in law,Con dÃ¢u,,
+divorced,adj. /di'vo:sd/Ä‘Ã£ ly hÃ´n,,
+elder brother,anh trai,,
+elder sister,chá»‹ gÃ¡i,,
+engaged,adj. /inÂ´geidÊ’d/Ä‘Ã£ Ä‘Ã­nh Æ°á»›c,,
+Extended family,Ä‘áº¡i gia Ä‘Ã¬nh,,
+Fall out (with sb),tranh cÃ£i,,
+family,gia Ä‘Ã¬nh,,
+Family tree,cÃ¢y pháº£ há»‡, Ã´ng ná»™i,
+father,bá»‘,,
+father in law,Bá»‘ chá»“ng/vá»£, cáº­u, bÃ¡c trai
+flesh and blood,mÃ¡u má»§ ruá»™t thá»‹t, em trai,
+formative years,nÄƒm thÃ¡ng hÃ¬nh thÃ nh tÃ­nh cÃ¡ch,,
+Generation gap,khoáº£ng cÃ¡ch giá»¯a cÃ¡c tháº¿ há»‡, anh/em vá»£,
+Get along with,CÃ³ má»‘i quan há»‡ tá»‘t vá»›i ai Ä‘Ã³,,
+Get along with somebody,há»£p vá»›i ai, chá»‹, em)
+Get married to sb,káº¿t hÃ´n vá»›i ai,,
+Get on with/get along with somebody,hoÃ n thuáº­n vá»›i ai,,
+Get together,cÃ¹ng nhau,,
+Give birth to,sinh con,,
+Go/ turn grey,báº¡c Ä‘áº§u,,
+godmother,máº¹ Ä‘á»¡ Ä‘áº§u,,
+granddaughter,chÃ¡u gÃ¡i, ngoáº¡i,
+grandfather,n. /Â´grÃ¦nÂ¸fa:Ã°É™/Ã´ng ngoáº¡i,,
+grandmother,n. /'grÃ¦n,,
+grandparents,Ã´ng bÃ ,,
+grandson,chÃ¡u trai, n. /'relÉ™tiv/cÃ³ liÃªn quan Ä‘áº¿n; ngÆ°á»i cÃ³ há», Ä‘áº¡i tá»« quan há»‡
+Great-,DÃ¹ng Ä‘á»ƒ lÃ¹i vá» 1 tháº¿ há»‡.,,
+great - grandparents,cá»¥,,
+Great-aunt,bÃ  thÃ­m,,
+Great-grandfather,(n) Ã´ng cá»‘,,
+Great-grandmother,bÃ  cá»‘,,
+Great-grandparent,Ã´ng cá»‘ hoáº·c bÃ  cá»‘,,
+Great-uncle,Ã´ng chÃº,,
+Grow up,lá»›n lÃªn,,
+half-brother,/ËˆhÃ¦f brÊŒÃ°É™r/anh em cÃ¹ng cha khÃ¡c máº¹/cÃ¹ng máº¹ khÃ¡c cha,,
+half-sister,/ËˆhÃ¦f sÉªstÉ™r/chá»‹ em cÃ¹ng cha khÃ¡c máº¹/cÃ¹ng máº¹ khÃ¡c cha,,
+husband,chá»“ng,,
+infant,tráº» sÆ¡ sinh,,
+Like father, like son,,
+Like two peas in the same pot,anh em giá»‘ng nhau,,
+Make up (with sb),lÃ m hÃ²a vá»›i ai,,
+married,adj. /Â´mÃ¦rid/cÆ°á»›i,,
+maternal/ paternal grandparents,Ã´ng bÃ  ngoáº¡i/ná»™i,,
+Matriarchy,cháº¿ Ä‘á»™ máº«u quyá»n,,
+Men make houses, women make homes,,
+mother,máº¹,,
+mother in law,Máº¹ chá»“ng/vá»£,,
+My daughter and son never get along with each other.,,,
+nanny,báº£o máº«u,,
+nephew,chÃ¡u trai, tin cáº­y, tin tÆ°á»Ÿng vÃ o
+niece,chÃ¡u gÃ¡i, thÃ¡n phá»¥c,
+only child,con má»™t,,
+orphan,tráº» má»“ cÃ´i,,
+parent,bá»‘ máº¹,,
+Parents,Bá»‘ máº¹, quÃ¡t máº¯ng,
+parents-in-law,Cha máº¹ chá»“ng, tranh luáº­n vá»›i ai,
+patriarchy,cháº¿ Ä‘á»™ phá»¥ há»‡,,
+Propose to sb,cáº§u hÃ´n ai,,
+relative,adj., hÃ´n phu,
+Rely on,(v) tin vÃ o, hÃ´n thÃª,
+Run in the family,cÃ³ tÃ­nh di truyá»n,,
+second cousin,/ËŒsekÉ™nd ËˆkÊŒzn/ChÃ¡u trai/gÃ¡i con cá»§a anh chá»‹ em bÃ  con, Ä‘Ã£ há»©a hÃ´n; Ä‘Ã£ cÃ³ ngÆ°á»i,
+separated,adj. /'seprÉ™tid/ly thÃ¢n, káº¿t hÃ´n,
+Settle down,á»”n Ä‘á»‹nh cuá»™c sá»‘ng táº¡i má»™t chá»— nÃ o Ä‘Ã³,,
+sibling,anh chá»‹ em ruá»™t,,
+siblings,a/c/e ruá»™t,,
+Single parent,bá»‘ máº¹ Ä‘Æ¡n thÃ¢n,,
+sister,chá»‹ gÃ¡i,,
+son,con trai,,
+son in law,Con rá»ƒ, Ã´ng cá»¥,
+split up,chia tay,,
+stepfather,/ËˆstepfÉ‘ËÃ°É™r/Bá»‘ dÆ°á»£ng, bÃ  bÃ¡c (chá»‹ hoáº·c em cá»§a Ã´ng ná»™i),
+stepmother,máº¹ káº¿, tÃ­nh cÃ¡ch y nhÆ° bá»‘ máº¹,
+Take care of = Look after,chÄƒm sÃ³c,,
+Tanned skin runs in my family. ( Gia Ä‘Ã¬nh tÃ´i ai cÅ©ng cÃ³ lÃ n da nÃ¢u ),,,
+Tell off,la ráº§y,,
+The apple of one's eyes,ngÆ°á»i Ä‘Æ°á»£c cÆ°ng chiá»u,MÃ¡u cháº£y, ruá»™t má»m.
+The in laws,quan há»‡ thÃ´ng gia,,
+To have something in common,cÃ³ Ä‘iá»ƒm chung,,
+toddler,Ä‘á»©a bÃ© chá»‰ má»›i biáº¿t Ä‘i,,
+triplet,sinh ba,,
+Twin,Con sinh Ä‘Ã´i,,
+twin,anh chá»‹ em sinh Ä‘Ã´i, khÃ´ng giá»‘ng lÃ´ng cÅ©ng giá»‘ng cÃ¡nh,
+uncle,chÃº,,
+Until the cow comes home,ráº¥t muá»™n,,
+When the blood sheds, the heart aches,giá»‘ng há»‡t nhau,
+widow,quáº£ phá»¥/ngÆ°á»i gÃ³a chá»“ng, bÃ¡t sáº¡ch ngon cÆ¡m,
+widower,ngÆ°á»i goÃ¡ vá»£,Ä‘Ã n Ã´ng xÃ¢y nhÃ , Ä‘Ã n bÃ  xÃ¢y tá»• áº¥m
+wife,n. /waif/vá»£,,
+younger brother,em trai,,
+younger sister,em gai,,

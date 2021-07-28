@@ -35,7 +35,7 @@ class VocabularyConvertor(BaseConvertor):
         super().__init__(Vocabulary())
 
     def from_cursor(self,cursor):
-        return Vocabulary(cursor[0],cursor[1],cursor[2],cursor[3],cursor[4],cursor[5],cursor[6])
+        return Vocabulary(cursor[0],cursor[1],cursor[2],cursor[3],cursor[4],cursor[5],cursor[6],cursor[7])
 
 class TypingConvertor(BaseConvertor):
 
@@ -73,7 +73,7 @@ class VocabularyDTOConvertor(BaseConvertor):
         super().__init__(VocabularyDTO())
 
     def from_cursor(self,cursor):
-        return VocabularyDTO(cursor[0],cursor[1],cursor[2],cursor[3],cursor[4],cursor[5],cursor[6],cursor[7],cursor[8],cursor[9],cursor[10],cursor[11],cursor[12])
+        return VocabularyDTO(cursor[0],cursor[1],cursor[2],cursor[3],cursor[4],cursor[5],cursor[6],cursor[7],cursor[8],cursor[9],cursor[10],cursor[11],cursor[12],cursor[13])
 
 class FileImportConvertor(BaseConvertor):
 

@@ -115,6 +115,7 @@ class QueryBuilder:
     SORT_BY_UPDATE_DATE = ' ORDER BY date_create DESC '
     LIST_UNIT_LASTEST = 'SELECT * FROM listunitnearest'
     SELECT_VDTO_BY_UNIT = 'SELECT * FROM hacknao1500.vocabularydto_by_unit where unit_code=\'{}\';'
+    
 
     def __init__(self,object,primaries=None,object_origin=None):
         self.table = type(object).__name__

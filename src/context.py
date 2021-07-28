@@ -1,4 +1,7 @@
 import csv
+from nltk.corpus.reader.wordnet import ADJ, ADV, NOUN, VERB
+
+from nltk.stem.wordnet import WordNetLemmatizer
 from src.query_util import QueryBuilder
 import webbrowser
 from os import execlp, listdir
@@ -14,7 +17,7 @@ from src.fragment import Fragment
 from src.menu import InforMenu, ItemInfo, Menu, Option
 from src.model import Antonym, Example, FileImport, Synonymous, Typing, Unit, Vocabulary
 from src.service import VocabularyService
-from src.stuff_util import get_or_default, high_light, translate
+from src.stuff_util import get_notation, get_or_default, high_light, translate
 
 
 class VocabularyContext(Menu):
@@ -52,6 +55,8 @@ class VocabularyContext(Menu):
         self.hellochao_flag = False
         self.revision = False
         self.already_browse = False
+        self.image_type_flag = False
+        self.image_define_flag = False
         super().__init__('Study My vocabulary')
         self.add_option()
         self.add_command()
@@ -69,9 +74,14 @@ class VocabularyContext(Menu):
 
     def browse_image(self):
         _url = 'https://www.google.com/search?q={}&sxsrf=ALeKk03EFAl6_PKISQWrTKI0BXCHyhL6oA:1626692109365&source=lnms&tbm=isch&sa=X&ved=2ahUKEwi5ltmq_O7xAhXQ7XMBHYLJDfUQ_AUoAXoECAEQAw&biw=1137&bih=730'
-        if(self.browseimg_flag and not self.is_empty() and not self.already_browse):
+        url = _url.format(self.current_item.english)
+        if(self.image_type_flag):
+            url = url + ' ' + self.current_item.type_word
+        if(self.image_define_flag):
+            url = 'define: '+url
+        if(self.browseimg_flag and not self.already_browse):
             self.already_browse = True
-            self.browse(_url.format(self.current_item.english))
+            self.browse(url)
 
 
     def sound_english(self):
@@ -159,7 +169,13 @@ class VocabularyContext(Menu):
         self.browse(_url)
 
     def toggle_browse_image_flag(self,args):
-        self.browseimg_flag = not self.browseimg_flag
+        if(len(args)>0):
+            if(args[0] == 'type'):
+                self.image_type_flag= not self.image_type_flag
+            elif(args[0] == 'define'):
+                self.image_define_flag = not self.image_define_flag
+        else:
+            self.browseimg_flag = not self.browseimg_flag
 
     def get_vocabularies(self):
         vocabularies = []
@@ -176,6 +192,7 @@ class VocabularyContext(Menu):
                 vocabulary = vocabulary_dao.get_by_ids()
                 self.current_item.type_word = ' '.join(args[1:])
                 vocabulary.type_word = self.current_item.type_word
+                vocabulary.stem = self.set_stem(args)
                 self.update_vocabulary(vocabulary)
 
     def pronoun_vocabulary(self,args):
@@ -208,13 +225,7 @@ class VocabularyContext(Menu):
             self.vocabularies = self.get_vocabularies()
         elif args[0] == 'spk':
             self.toggle_speak_english_flag(args)
-        elif args[0] == 'br':
-            self.toggle_browse_image_flag(args)
-        elif args[0] == 'camb':
-            self.cambridge(args)
-        elif args[0] == 'oxford':
-            self.oxford(args)
-
+            
     def update_typing(self,typing):
         typing_dao = self.get_typing_dao()
         typing_dao.update(typing)
@@ -331,6 +342,16 @@ class VocabularyContext(Menu):
         self.commands.add_command('-camb',self.toggle_camb)
         self.commands.add_command('-oxford',self.toggle_oxford)
         self.commands.add_command('-hellochao',self.toggle_hellochao)
+        self.commands.add_command('-image',self.toggle_browse_image_flag)
+        self.commands.add_command('-stem',self.set_stem)
+
+
+    def set_stem(self,args):
+        lemmatizer = WordNetLemmatizer()
+        item =  self.current_item
+        stem = lemmatizer.lemmatize(item.english,pos=get_notation(item.type_word))
+        self.current_item.stem = stem
+        return stem
 
     def toggle_camb(self,args):
         self.camb_flag = not self.camb_flag
@@ -378,10 +399,20 @@ class VocabularyContext(Menu):
             if(self.revision):
                 return self.revion_mode()
             return self.base_info()
+
     def colorize(self,sentence):
-        english = self.current_item.english
-        sentence = sentence.replace(english,high_light(english,Color.BEIGE2))
-        return sentence.replace(english.capitalize(),high_light(english.capitalize(),Color.BEIGE2))
+        sentence = sentence.split(' ')
+        for english in self.current_item.english.split(' '):
+            new_sent = []
+            for word in sentence:
+                sen = word
+                if(english.lower() == ''.join(re.split('[\.|\;|\,|\!|\?]',word))):
+                    sen = word.replace(english.lower(),high_light(english.lower(),Color.BEIGE2,Color.WHITE2+Color.ITALIC))
+                elif english.capitalize() == word:
+                    sen = word.replace(english.capitalize(),high_light(english.capitalize(),Color.BEIGE2,Color.WHITE2+Color.ITALIC))
+                new_sent.append(sen)
+            sentence = new_sent
+        return ' '.join(sentence)
 
     def base_info(self):
         examples = [self.colorize(example.example) for example in ExampleDao(Example()).get_by_english(english=self.current_item.english)]
@@ -393,60 +424,109 @@ class VocabularyContext(Menu):
         for vi in vietnamese_studied:
             for v in re.split('[\.|\,|\;]',vi):
                 vietnamese.append(v.strip())
-        vietnamese = set(vietnamese)
+        vietnamese = [v for v in set(vietnamese) if v != self.current_item.vietnamese]
         infor_menu = InforMenu()
-        infor_menu.add_item(ItemInfo('No',str(self.current_index+1)+'/'+ str(len(self.vocabularies)),Color.VIOLET2))
-        infor_menu.add_item(ItemInfo('English',self.current_item.english,Color.VIOLET2,Color.BLUE2))
-        infor_menu.add_item(ItemInfo('IPA',self.current_item.pronounce,Color.VIOLET2))
-        infor_menu.add_item(ItemInfo('Label',self.current_item.type_word,Color.VIOLET2))
-        infor_menu.add_item(ItemInfo('Translated',self.current_item.vietnamese,Color.VIOLET2,Color.YELLOW2))
-        infor_menu.add_item(ItemInfo('Example','\n'.join(examples),Color.VIOLET2,Color.ITALIC))
-        infor_menu.add_item(ItemInfo('Synonymous','; '.join(synonymous),Color.VIOLET2,Color.YELLOW2))
-        infor_menu.add_item(ItemInfo('Antonym','; '.join(antonym),Color.VIOLET2,Color.BEIGE2))
-        infor_menu.add_item(ItemInfo('Unit','; '.join(unit_contains),Color.VIOLET2,Color.BLINK2))
-        infor_menu.add_item(ItemInfo('Mean other','; '.join(vietnamese),Color.VIOLET2,Color.YELLOW2))
-        infor_menu.add_item(ItemInfo('RTS',self.current_item.right_times,Color.VIOLET2,Color.GREEN2,inline_flag=True))
-        infor_menu.add_item(ItemInfo('WTS',self.current_item.wrong_times,Color.VIOLET2,Color.RED2))
+        infor_menu.add_item(ItemInfo('No',str(self.current_index+1)+'/'+ str(len(self.vocabularies)),Color.VIOLET2+Color.BOLD))
+        infor_menu.add_item(ItemInfo('English',self.current_item.english,Color.VIOLET2+Color.BOLD,Color.BLUE2))
+        infor_menu.add_item(ItemInfo('IPA',self.current_item.pronounce,Color.VIOLET2+Color.BOLD))
+        infor_menu.add_item(ItemInfo('Label',self.current_item.type_word,Color.VIOLET2+Color.BOLD))
+        infor_menu.add_item(ItemInfo('Translated',self.current_item.vietnamese,Color.VIOLET2+Color.BOLD,Color.YELLOW2))
+        infor_menu.add_item(ItemInfo('Example','\n'.join(examples),Color.VIOLET2+Color.BOLD,Color.WHITE2 + Color.ITALIC))
+        infor_menu.add_item(ItemInfo('Stem',self.current_item.stem,Color.VIOLET2+Color.BOLD))
+        infor_menu.add_item(ItemInfo('Synonymous','; '.join(synonymous),Color.VIOLET2+Color.BOLD,Color.YELLOW2))
+        infor_menu.add_item(ItemInfo('Antonym','; '.join(antonym),Color.VIOLET2+Color.BOLD,Color.BEIGE2))
+        infor_menu.add_item(ItemInfo('Unit','; '.join(unit_contains),Color.VIOLET2+Color.BOLD,Color.BLINK2))
+        infor_menu.add_item(ItemInfo('Mean other','; '.join(vietnamese),Color.VIOLET2+Color.BOLD,Color.YELLOW2))
+        infor_menu.add_item(ItemInfo('RTS',self.current_item.right_times,Color.VIOLET2+Color.BOLD,Color.GREEN2,inline_flag=True))
+        infor_menu.add_item(ItemInfo('WTS',self.current_item.wrong_times,Color.VIOLET2+Color.BOLD,Color.RED2))
         
         return infor_menu
 
     def revion_mode(self):
         infor_menu = InforMenu()
-        infor_menu.add_item(ItemInfo('No',self.current_index+1,Color.VIOLET2))
-        infor_menu.add_item(ItemInfo('English','**********',Color.VIOLET2,Color.BLUE2))
-        infor_menu.add_item(ItemInfo('Translated',self.current_item.vietnamese,Color.VIOLET2,Color.YELLOW2))
-        infor_menu.add_item(ItemInfo('Pronounce','********'))
-        infor_menu.add_item(ItemInfo('Lable',self.current_item.type_word,Color.VIOLET2))
-        infor_menu.add_item(ItemInfo('RTS',self.current_item.right_times,Color.VIOLET2,Color.GREEN2))
-        infor_menu.add_item(ItemInfo('WTS',self.current_item.wrong_times,Color.VIOLET2,Color.RED2))
+        infor_menu.add_item(ItemInfo('No',self.current_index+1,Color.VIOLET2+Color.BOLD))
+        infor_menu.add_item(ItemInfo('English','**********',Color.VIOLET2+Color.BOLD,Color.BLUE2))
+        infor_menu.add_item(ItemInfo('Translated',self.current_item.vietnamese,Color.VIOLET2+Color.BOLD,Color.YELLOW2))
+        infor_menu.add_item(ItemInfo('Pronounce','********',Color.VIOLET2+Color.BOLD))
+        infor_menu.add_item(ItemInfo('Lable',self.current_item.type_word,Color.VIOLET2+Color.BOLD))
+        infor_menu.add_item(ItemInfo('RTS',self.current_item.right_times,Color.VIOLET2+Color.BOLD,Color.GREEN2))
+        infor_menu.add_item(ItemInfo('WTS',self.current_item.wrong_times,Color.VIOLET2+Color.BOLD,Color.RED2))
         return infor_menu
 
-    def equals(self):
-        return self.current_item.english.lower() in  self.user_input.lower().split(' ')
+    def equals(self,user_input):
+        input_string = user_input.lower()
+        return  all( x in  input_string.split(' ') for x in self.current_item.english.lower().split(' ') )
 
+    def equals_syn(self,user_input):
+        synonymous = SynonymousDao(Synonymous()).get_by_english(user_input)
+        english_words = [syn.english for syn in synonymous]
+        result = True
+        for english in english_words:
+            input_string = user_input.lower()
+            result = result and all( x in  input_string.split(' ') for x in english.lower().split(' '))
+        return result
+    
+    def equals_an(self,user_input):
+        antonym = AntonymDao(Antonym()).get_by_english(user_input)
+        english_words = [an.english for an in antonym]
+        result = True
+        for english in english_words:
+            input_string = user_input.lower()
+            result = result and all( x in  input_string.split(' ') for x in english.lower().split(' '))
+        return result
 
-
-    def process_when_right(self):
+    def process_when_right(self,user_input=None):
         self.user_input = ''
-        self.current_item.right_times = self.current_item.right_times + 1
         typing_dao = self.get_typing_dao()
+        if user_input:
+            typing_dao = TypingDao(Typing())
+            typing_dao.loader_typing(user_input)
         typing = typing_dao.get_by_ids()
-        typing.right_times = self.current_item.right_times
+        typing.right_times = str(int(typing.right_times) + 1)
         typing_dao.update(typing)
+        self.current_item.right_times = typing.right_times
 
-    def process_when_wrong(self):
-        self.current_item.wrong_times = self.current_item.wrong_times + 1
-        typing_dao = self.get_typing_dao()
+    def process_when_wrong(self,user_input=None):
+        self.user_input = ''
+        if(not user_input):
+            typing_dao = self.get_typing_dao()
+        else:
+            typing_dao = TypingDao(Typing())
+            typing_dao.loader_typing(user_input)
         typing = typing_dao.get_by_ids()
-        typing.wrong_times = self.current_item.wrong_times
+        typing.wrong_times = str(int(typing.wrong_times) + 1)
         typing_dao.update(typing)
+        self.current_item.wrong_times = typing.wrong_times
    
     def process_custom(self):
-        if(self.equals()):
-            self.process_when_right()
-        elif(self.user_input != ''):
-            self.process_when_wrong()
-        
+        wrong_list = []
+        if(self.user_input.startswith('=')):
+            for user_input in re.split('=|;\s*',self.user_input):
+                if user_input !='':
+                    if(self.equals_syn(user_input)):
+                        self.process_when_right(user_input)
+                    else:
+                        wrong_list.append(user_input)
+                        self.process_when_wrong(user_input)
+            self.user_input = '; '.join(set(wrong_list))
+        elif(self.user_input.startswith('#')):
+            for user_input in re.split('#|;\s*',self.user_input):
+                if user_input !='':
+                    if(self.equals_an(user_input)):
+                        self.process_when_right(user_input)
+                    else:
+                        wrong_list.append(user_input)
+                        self.process_when_wrong(user_input)
+            self.user_input = '; '.join(set(wrong_list))
+        else:
+            for user_input in re.split(';\s*',self.user_input):
+                if user_input != '':
+                    if(self.equals(user_input)):
+                        self.process_when_right()
+                    else:
+                        wrong_list.append(user_input)
+                        self.process_when_wrong()
+            self.user_input = '; '.join(set(wrong_list))
     
 class UnitContext(Menu):
 
@@ -615,26 +695,25 @@ class UnitContext(Menu):
                 for row in reader:
                     idx = idx + 1
                     if(idx == 1):
-                        
                         unit = Unit(unit_code=row[0],unit_topic=row[1])
                     else:
                         while(len(row)<2):
                             row.append('')
-                        vocabulary = Vocabulary(english=row[0],vietnamese=','.join(row[1:]))
+                        mean = ','.join(row[1:]).split(';')
+                        vietnamese = mean[0]
+                        type_word = ''
+                        if(len(mean)>1):
+                            type_word = mean[1].capitalize()
+                        vocabulary = Vocabulary(english=row[0],vietnamese=vietnamese,type_word=type_word)
                         vocabularies.append(vocabulary)
                 UnitDao(unit).update_or_save()
                 for v in vocabularies:
                     if(v.english !=''):
                         v.unit_code = unit.unit_code
-                        result = translate(v.english)
-                        if(v.vietnamese == ''):
-                            v.vietnamese = result[0] if result[0] != '' else gs().translate(v.english,'vi')
-                        if(v.type_word == 'Undefined' and result[1] != ''):
-                            v.type_word = result[1]
                         print(v.english,' >>> ',v.vietnamese,'(',v.type_word,')')
                         VocabularyDao(v).update_or_save()
                 self.save_or_update_file(filename)
-            input("Enter to continue...")
+            #input(filename + " Enter to continue...")
         except FileNotFoundError as e:
             input(e)
         except Exception as e:
@@ -642,8 +721,9 @@ class UnitContext(Menu):
 
     def import_csv(self):
         self.list_file()
-        filename = self.choose_file()
-        self.read_file(filename)
+        filenames = self.choose_file()
+        for filename in re.split(';\s*',filenames):
+            self.read_file(filename)
 
     def add_option(self):
             self.options.append(Option('study vocabulary',self.study_vocabulary))
