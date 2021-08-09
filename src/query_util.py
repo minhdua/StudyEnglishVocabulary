@@ -61,7 +61,8 @@ class StringMapper:
             object_dict = self.mapper_object()
             return key +'='+ object_dict[key]
         except KeyError as e:
-            print (e)
+            pass
+            # print (e)
 
     def greater_string(self,key):
         object_dict = self.mapper_object()
@@ -90,7 +91,8 @@ class StringMapper:
             else:
                 return self.equals_string(field[0])
         except KeyError as e:
-            print (e)
+            pass
+            # print (e)
 
 class QueryBuilder:
     '''

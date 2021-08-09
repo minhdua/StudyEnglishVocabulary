@@ -20,18 +20,22 @@ class Connector:
         except IntegrityError as e:
             input(e)
         except DatabaseError as e:
-            print(e)
+            pass
+#print(e)
         except Exception as e:
-            print(e)
+            pass
+#print(e)
 
     def fetchone(self,sql):
         try:
             self.execute(sql)
             return self.my_cursor.fetchone()
         except IntegrityError as e:
-            print(e)
+            pass
+#print(e)
         except DatabaseError as e:
-            print(e)
+            pass
+#print(e)
 
     def commit(self,sql):
         try:
@@ -40,9 +44,11 @@ class Connector:
         except InternalError as e:
             input(e)
         except DatabaseError as e:
-            print(e)
+            pass
+#print(e)
         except Exception as e:
-            print(e)
+            pass
+#print(e)
 
     def callproc(self):
         args =[0,1,2]

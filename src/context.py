@@ -1,24 +1,26 @@
 import csv
-from nltk.corpus.reader.wordnet import ADJ, ADV, NOUN, VERB
-
-from nltk.stem.wordnet import WordNetLemmatizer
-from src.query_util import QueryBuilder
+import re
+import typing
 import webbrowser
 from os import execlp, listdir
 from os.path import isfile, join
-from goslate import Goslate as gs
-import re
+
 import eng_to_ipa
 import pyttsx3
+from goslate import Goslate as gs
+from nltk.corpus.reader.wordnet import ADJ, ADV, NOUN, VERB
+from nltk.stem.wordnet import WordNetLemmatizer
 
 from src.constant import Color
-from src.dao import AntonymDao, ExampleDao, FileImportDao, StatisticsDao, SynonymousDao, TypingDao, UnitDao, VocabularyDao
+from src.dao import (AntonymDao, ExampleDao, FileImportDao, StatisticsDao,
+                     SynonymousDao, TypingDao, UnitDao, VocabularyDao)
 from src.fragment import Fragment
 from src.menu import InforMenu, ItemInfo, Menu, Option
-from src.model import Antonym, Example, FileImport, Synonymous, Typing, Unit, Vocabulary
+from src.model import (Antonym, Example, FileImport, Synonymous, Typing, Unit,
+                       Vocabulary)
+from src.query_util import QueryBuilder
 from src.service import VocabularyService
 from src.stuff_util import get_notation, get_or_default, high_light, translate
-
 
 class VocabularyContext(Menu):
     '''
@@ -364,12 +366,12 @@ class VocabularyContext(Menu):
 
     def example(self,args):
         if(len(args)>1):
-            if args[0] == 'a':
-                sentence = ' '.join(args[1:])
-                ExampleDao(Example(english=self.current_item.english,example=sentence)).update_or_save()
-            elif args[0] == 'rm':
-                sentence = ' '.join(args[1:])
-                ExampleDao(Example(english=self.current_item.english,example=sentence)).delete_by_example(sentence)
+            sentences = re.split(';\s*',' '.join(args[1:]))
+            for sentence in sentences:
+                if args[0] == 'a':
+                    ExampleDao(Example(english=self.current_item.english,example=sentence)).update_or_save()
+                elif args[0] == 'rm':
+                    ExampleDao(Example(english=self.current_item.english,example=sentence)).delete_by_example(sentence)
         else:
             examples = ExampleDao(Example()).get_by_english(english=self.current_item.english)
             for example in examples:
@@ -479,12 +481,17 @@ class VocabularyContext(Menu):
         self.user_input = ''
         typing_dao = self.get_typing_dao()
         if user_input:
+            user_input =  user_input.replace("'","\\'")
+            user_input =  re.sub(r'\.|\,|\?|\!','', user_input)
             typing_dao = TypingDao(Typing())
             typing_dao.loader_typing(user_input)
         typing = typing_dao.get_by_ids()
         typing.right_times = str(int(typing.right_times) + 1)
         typing_dao.update(typing)
-        self.current_item.right_times = typing.right_times
+        words = typing.english.split(' ')
+        if(len(words)>1):
+            for word in words:
+                self.process_when_right(word)
 
     def process_when_wrong(self,user_input=None):
         self.user_input = ''
@@ -496,8 +503,11 @@ class VocabularyContext(Menu):
         typing = typing_dao.get_by_ids()
         typing.wrong_times = str(int(typing.wrong_times) + 1)
         typing_dao.update(typing)
-        self.current_item.wrong_times = typing.wrong_times
-   
+        words = typing.english.split(' ')
+        if(len(words)>1):
+            for word in words:
+                self.process_when_right(word)
+
     def process_custom(self):
         wrong_list = []
         if(self.user_input.startswith('=')):
@@ -527,6 +537,10 @@ class VocabularyContext(Menu):
                         wrong_list.append(user_input)
                         self.process_when_wrong()
             self.user_input = '; '.join(set(wrong_list))
+        typing_dao = self.get_typing_dao()
+        typing = typing_dao.get_by_ids()
+        self.current_item.right_times = typing.right_times
+        self.current_item.wrong_times = typing.wrong_times
     
 class UnitContext(Menu):
 
@@ -699,12 +713,16 @@ class UnitContext(Menu):
                     else:
                         while(len(row)<2):
                             row.append('')
-                        mean = ','.join(row[1:]).split(';')
-                        vietnamese = mean[0]
+                        mean = ','.join(row[0:]).split(';')
+                        english = mean[0]
                         type_word = ''
-                        if(len(mean)>1):
-                            type_word = mean[1].capitalize()
-                        vocabulary = Vocabulary(english=row[0],vietnamese=vietnamese,type_word=type_word)
+                        vietnamese = 'No Name'
+                        try:
+                            vietnamese = mean[1]
+                            type_word = mean[2].capitalize()
+                        except:
+                            pass
+                        vocabulary = Vocabulary(english=english,vietnamese=vietnamese,type_word=type_word)
                         vocabularies.append(vocabulary)
                 UnitDao(unit).update_or_save()
                 for v in vocabularies:

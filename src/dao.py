@@ -190,11 +190,11 @@ class TypingDao(BaseDao):
         typing = self.get_by_ids()
         if(not typing):
             self.query.set_object(Typing(english=english))
-            self.update_extend()
+            #self.update_extend()
             self.save()
         else:
             self.typing = typing
-            self.update_extend()
+            #self.update_extend()
             self.update(self.typing)
         return self.typing
 
