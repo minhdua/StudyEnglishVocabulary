@@ -1,35 +1,49 @@
 TOIECALUNIT07,Toiec A Listening Unit 7
-basket,rổ
-under construction,đang được xây dựng
-in a line,trên 1 hàng dọc
-in a row,trên 1 hàng ngang
-on display,được trưng bày
-be stocked with = be occupied,được dự trữ, được sắp xếp
-be piled up = be stacked up,được chất đống
-label,dán nhãn
-attach,đính kèm
-be lined with,dọc theo, song song
-be covered with,bị bao phủ bởi
-drawer,ngăn kéo
-potted plant,cây trồng trong chậu
-bench,ghế dài
-cabinet,tủ
-tow,kéo đi
-construction site,công trường
-hill,đồi
-folder,thư mục, kẹp tài liệu
-driveway,đường lái xe vào nhà
-proofread = review documents,đọc và soát lỗi
-register = sign up for,đăng kí
-make it to = arrive on time,đến kịp giờ
-cancel = call off,huỷ
-refreshment = snack and beverage,đồ ăn nhẹ
-distribute = hand out,phân phát
-participation = attendance,sự tham gia
-dessert,món tráng miệng
-dock,bến tàu
-ceiling,trần nhà
-tray,cái khay
-kitchen sink,bồn rửa bát
-caterer,người cung cấp thực phẩm
-beside = by,bên cạnh
+basket;rổ;undefined
+under construction;đang được xây dựng;undefined
+in a line;trên 1 hàng dọc;undefined
+in a row;trên 1 hàng ngang;undefined
+on display;được trưng bày;undefined
+be stocked with = be occupied;được dự trữ, được sắp xếp;undefined
+be piled up = be stacked up;được chất đống;undefined
+label;dán nhãn;undefined
+attach;đính kèm;undefined
+be lined with;dọc theo, song song;undefined
+be covered with;bị bao phủ bởi;undefined
+drawer;ngăn kéo;undefined
+potted plant;cây trồng trong chậu;undefined
+bench;ghế dài;undefined
+cabinet;tủ;undefined
+tow;kéo đi;undefined
+construction site;công trường;undefined
+hill;đồi;undefined
+folder;thư mục, kẹp tài liệu;undefined
+driveway;đường lái xe vào nhà;undefined
+proofread = review documents;đọc và soát lỗi;undefined
+register = sign up for;đăng kí;undefined
+make it to = arrive on time;đến kịp giờ;undefined
+cancel = call off;huỷ;undefined
+refreshment = snack and beverage;đồ ăn nhẹ;undefined
+distribute = hand out;phân phát;undefined
+participation = attendance;sự tham gia;undefined
+dessert;món tráng miệng;undefined
+dock;bến tàu;undefined
+ceiling;trần nhà;undefined
+tray;cái khay;undefined
+kitchen sink;bồn rửa bát;undefined
+caterer;người cung cấp thực phẩm;undefined
+admission;sự nhận vào;undefined
+fantastic;tuyệt vời;adj
+beverage;đồ uống;undefined
+marine;biển, gần biển;
+lobster;tôm hùm;
+steamed;hấp;
+clam;con nghêu;
+cocktail;rượu cốc tai;
+grill;nướng
+merger;sự sáp nhập;
+loan;khoản vay;
+out of ink;hết mực;adj
+narrow;thu hẹp;adj-v
+suit;bộ com lê, trang phục,thích hợp, quen, hợp với;v
+raise;sự nâng, sự tăng (lương);n

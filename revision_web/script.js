@@ -108,7 +108,23 @@ $(document).ready(function(){
 		var shuffle_choices  = [...current_choices].sort((a, b) => 0.5 - Math.random());
 		createTable(shuffle_choices);
 	});
-	
+
+	$('#export-button').click(function(){
+		exportCsv();
+	});
+
+	$('#error-button').click(function(){
+		var wordList =  getListErrorIndex().join(';');
+		$('#range-box').val(wordList);
+		$('#submit-button').click();
+	});
+
+	$('#blank-button').click(function(){
+		var wordList =  getListErrorBlank().join(';');
+		$('#range-box').val(wordList);
+		$('#submit-button').click();
+	});
+
 	$('.arrow-right').click(function(){
 		if(current_choices.length>0){
 			showInfor();
@@ -325,6 +341,9 @@ function createTable(datas){
 				English\
 			</th>\
 			<th class ="cell">\
+				Type of word\
+			</th>\
+			<th class ="cell">\
 				Vietnamese\
 			</th>\
 			<th class ="cell">\
@@ -338,6 +357,9 @@ function createTable(datas){
 			</th>\
 			<th class ="cell hidden">\
 				Check\
+			</th>\
+			<th class ="cell">\
+				Typing\
 			</th>\
 		<tr>\
 	');
@@ -365,8 +387,12 @@ function createTable(datas){
 					<input type="checkbox"></input>\
 				</td>\
 				<td class ="cell">\
-					<span class="english-word">'+data.english+'</span>\
-					<input type="text" class="english-word hidden"/>\
+					<span style="text-transform: capitalize;" class="english-word">'+data.english+'</span>\
+					<input type="text" style="text-transform: capitalize;" class="english-word hidden"/>\
+				</td>\
+				<td class ="cell">\
+					<span class="type-word">'+data.type+'</span>\
+					<input type="text" class="type-word hidden"/>\
 				</td>\
 				<td class ="cell">\
 					<span class="vietnamese-word">'+data.vietnamese+'</span>\
@@ -629,6 +655,59 @@ function hidenEnglish(){
 	checkMode = 1;
 }
 
+function getListErrorBlank(){
+	rows = $('input.errorVal');
+	var list = []
+	for(input of rows){
+		if ($(input).val() == ''){
+			list.push($(input).parents('tr').find('.no-word').text())
+		}
+	}
+	return list;
+}
+
+
+function getListErrorIndex(){
+	rows = $('input.errorVal').parents('tr').find('.no-word');
+	var list = [];
+	for(row of rows){
+		list.push(row.innerText);
+	}
+	return list
+}
+
+function exportCsv(){
+	var listError = getListErrorIndex();
+	
+	if(listError.length>0){
+		var text = "";
+		for (i=0;i<listError.length;i++){
+			var index = parseInt(listError[i]);
+			english = words[index].english;
+			vietnamese = words[index].vietnamese;
+			var type = words[index].type;
+			text += english +";"+vietnamese+";"+type+"\n";
+		}
+		var fileName = getCurrentDate();
+		var csvContent = "data:text/csv;charset=utf-8,";
+		var unit = fileName +"," + "revision date " +fileName+"\n";
+		csvContent += unit+text;
+		var encodedUri = encodeURI(csvContent);
+		var link = document.createElement("a");
+		link.setAttribute("href", encodedUri);
+		link.setAttribute("download",fileName+".csv");
+		document.body.appendChild(link);
+		link.click(); 
+	}
+}
+
+function getCurrentDate(){
+	var today = new Date();
+	var dd = String(today.getDate()).padStart(2, '0');
+	var mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
+	var yyyy = today.getFullYear();
+	return  yyyy + mm + dd;
+}
 function showEnglish(){
 	rowsSpan = getCheckedRow().find('span.english-word');
 	rowsInput = getCheckedRow().find('input.english-word');
@@ -682,8 +761,6 @@ function hidenVietNamese(){
 	$('#hidden-english-revise-button').prop('disabled',true);
 	$('#show-english-revise-button').prop('disabled',true);
 	$('#checkall-english-revise-button').prop('disabled',true);
-	
-	
 	$('#checkall-vietnamese-revise-button').prop('disabled',false);
 	$('#clear-vietnamese-revise-button').prop('disabled',false);
 	checkMode = 2;
@@ -716,6 +793,7 @@ function showVietNamese(){
 	checkMode = 0;
 	hiddenAllRowMessage()
 }
+
 
 
 function gotoWord(word){

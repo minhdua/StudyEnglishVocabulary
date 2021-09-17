@@ -6,6 +6,7 @@ from nltk.corpus.reader.wordnet import ADJ, ADV, NOUN, VERB
 
 from src.constant import Color
 from src.dto import ExtendInfo, RelationInfo
+import re
 
 
 def get_or_default(this,that):
@@ -28,7 +29,13 @@ def get_notation(word):
             return VERB
         else:
             return NOUN
-
+            
+def get_list_input(args):
+    list_input = []
+    if(args):
+        list_input = re.split(';\s*',' '.join(args))
+    return list_input
+    
 class Browser:
     def pronounce(self):
         try:

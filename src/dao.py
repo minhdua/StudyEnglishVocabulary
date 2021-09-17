@@ -5,12 +5,14 @@ from nltk.stem.wordnet import WordNetLemmatizer
 
 from src.connector import Connector
 from src.constant import Constant
-from src.convertor import (AntonymConvertor, ExampleConvertor, FileImportConvertor, GeneralInforConvertor,
-                           List20UnitLastestConvertor, SynonymousConvertor, TypingConvertor,
-                           UnitConvertor, VocabularyConvertor,
-                           VocabularyDTOConvertor)
+from src.convertor import (AntonymConvertor, ExampleConvertor,
+                           FileImportConvertor, GeneralInforConvertor,
+                           List20UnitLastestConvertor, SpellConvertor,
+                           SynonymousConvertor, TypingConvertor, UnitConvertor,
+                           VocabularyConvertor, VocabularyDTOConvertor)
 from src.dto import GeneralInfor
-from src.model import Antonym, Example, FileImport, Synonymous, Typing, Unit, Vocabulary
+from src.model import (Antonym, Example, FileImport, Spell, Synonymous, Typing,
+                       Unit, Vocabulary)
 from src.query_util import QueryBuilder
 from src.stuff_util import Browser, get_or_default
 
@@ -289,4 +291,13 @@ class AntonymDao(BaseDao):
             antonym = deepcopy(self.antonym)
             antonym.english = english
             return self.get_by_custom_query(antonym,['english'])
-        
+
+class SpellDao(BaseDao):
+    def __init__(self,spell=None):
+        self.spell = get_or_default(spell,Spell())
+        super().__init__(self.spell,SpellConvertor(),['vowel','ipa'])
+
+    def get_by_vowel(self,vowel):
+            spell = deepcopy(self.spell)
+            spell.vowel = vowel
+            return self.get_by_custom_query(vowel,['vowel'])

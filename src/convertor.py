@@ -2,7 +2,7 @@ from datetime import datetime
 
 from src.constant import Constant
 from src.dto import GeneralInfor, List20UnitLastest, VocabularyDTO
-from src.model import Antonym, Example, FileImport, Synonymous, Typing, Unit, Vocabulary
+from src.model import Antonym, Example, FileImport, Spell, Synonymous, Typing, Unit, Vocabulary
 from src.stuff_util import get_or_default
 
 
@@ -90,7 +90,6 @@ class ExampleConvertor(BaseConvertor):
     def from_cursor(self,cursor):
         return Example(cursor[0],cursor[1],cursor[2],cursor[3],cursor[4],cursor[5])
 
-
 class SynonymousConvertor(BaseConvertor):
     def __init__(self):
         super().__init__(Synonymous())
@@ -104,3 +103,10 @@ class AntonymConvertor(BaseConvertor):
 
     def from_cursor(self,cursor):
         return Antonym(cursor[0],cursor[1],cursor[2],cursor[3],cursor[4])
+
+class SpellConvertor(BaseConvertor):
+    def __init__(self):
+        super().__init__(Spell())
+
+    def from_cursor(self,cursor):
+        return Spell(cursor[0],cursor[1],cursor[2],cursor[3],cursor[4])

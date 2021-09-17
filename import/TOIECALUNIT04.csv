@@ -1,30 +1,49 @@
 TOIECALUNIT04,Toiec A Listening Unit 4
-branch office,văn phòng chi nhánh
-avenue,đại lộ
-address the problem,giải quyết vấn đề
-lobby,sảnh, hành lang
-around the corner,ngay gần đây, xung quanh đây
-supply room,phòng vật tư
-package,gói hàng
-mayoral election,bầu cử thị trưởng
-candidate,ứng viên
-confidential,tuyệt mật
-safe,cái két
-on board,trên tàu, thuyền
-land / take off,hạ cánh / cất cánh
-detour,đi đường vòng
-fasten one's seatbelt,thắt dây an toàn
-overhead bin / overhead compartment,buồng chứa đồ trên đầu
-traffic congestion,tắc đường
-instant noodle,mì ăn liền
-approximately,xấp xỉ
-complimentary,miễn phí
-secure,đảm bảo, giữ an toàn
-personal belongings,đồ đạc cá nhân
-crew member,phi hành đoàn
-intermission,nghỉ giữa giờ
-refreshment,món ăn nhẹ
-patron,khách quen
-performance,màn trình diễn
-signing event,buổi kí tặng
-cashier,thu ngân
+branch office;văn phòng chi nhánh;undefined
+avenue;đại lộ;undefined
+address the problem;giải quyết vấn đề;undefined
+lobby;sảnh, hành lang;undefined
+around the corner;ngay gần đây, xung quanh đây;undefined
+supply room;phòng vật tư;undefined
+package;gói hàng;undefined
+mayoral election;bầu cử thị trưởng;undefined
+candidate;ứng viên;undefined
+confidential;tuyệt mật;undefined
+safe;cái két;undefined
+on board;trên tàu, thuyền;undefined
+land / take off;hạ cánh / cất cánh;undefined
+detour;đi đường vòng;undefined
+fasten one's seatbelt;thắt dây an toàn;undefined
+overhead bin / overhead compartment;buồng chứa đồ trên đầu;undefined
+traffic congestion;tắc đường;undefined
+instant noodle;mì ăn liền;undefined
+approximately;xấp xỉ;undefined
+complimentary;miễn phí;undefined
+secure;đảm bảo, giữ an toàn;undefined
+personal belongings;đồ đạc cá nhân;undefined
+crew member;phi hành đoàn;undefined
+intermission;nghỉ giữa giờ;undefined
+refreshment;món ăn nhẹ;undefined
+patron;khách quen;undefined
+performance;màn trình diễn;undefined
+signing event;buổi kí tặng;undefined
+cashier;thu ngân;undefined
+cruise;chuyến đi chơi trên biển;n
+out of range;ngoài phạm vi;n
+generous;hào phóng;adj
+declaration;lời tuyên bố, tuyên ngôn;n
+custom-made;làm theo đơn đặt hàng;n
+retirement;sự nghỉ hưu;n
+restruct;tái cấu trúc;v
+bankrupt;vỡ nợ, phá sản;adj
+plain;đơn giản, dễ hiểu;adj
+nature;bản chất, tự nhiên;n
+warp;làm cong;v
+antique;đồ cổ;adj-n
+symphony;bản giao hưởng, nhạc giao hưởng;n
+suit;bộ com lê, trang phục; thích hợp, quen, hợp với;n
+conference;hội nghị, sự bàn bạc;n
+catalog;danh mục sản phẩm;n
+strike;đánh, đập, bãi công, đình công; cuộc bãi công, cuộc đình công;n
+plant;nhà máy;n
+folder;thư mục, kẹp tài liệu;n

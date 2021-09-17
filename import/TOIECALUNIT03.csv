@@ -1,37 +1,91 @@
 TOIECALUNIT03,Toiec A Listening Unit 3
-personnel,nhân sự
-hold documents,cầm tài liệu
-pack,đóng gói
-unpack,mở, tháo, dỡ
-hand something to others,đưa cái gì đó cho người khác
-sit on a bench,ngồi trên ghế
-bend over the table,cúi người trên bàn
-stand on the stage,đứng trên sân khấu
-lean against the wall,dựa vào tường
-lie on the floor,nằm trên sàn nhà
-coat,áo khoác
-wave,vẫy tay
-stack,xếp chồng lên, chất đống
-tableware,bộ đồ ăn
-job opening, / vacancy,cơ hội việc làm
-transfer, / relocate,chuyển công tác
-be qualified, / eligible for,đủ năng lực, đủ điều kiện cho
-performance evaluation,bản đánh giá năng lực
-replacement, / sustitute,người thay thế
-take a day off,nghỉ 1 ngày
-paid vacation,nghỉ được trả lương
-overtime pay,tiền ngoài giờ
-night shift,ca đêm
-severance package,gói trợ cấp thất nghiệp
-maternity leave,nghỉ thai sản
-take care of,quan tâm, chăm sóc
-reject,từ chối, bác bỏ
-approve,chấp thuận
-urgent,khẩn cấp
-counter,quầy
-railing,lan can, rào chắn
-pond,ao, hồ
-interviewee,người được phỏng vấn 
-interviewer,người phỏng vấn
-hallway,hành lang
-
+personnel;nhân sự;undefined
+hold documents;cầm tài liệu;undefined
+pack;đóng gói;undefined
+unpack;mở, tháo, dỡ;undefined
+hand something to others;đưa cái gì đó cho người khác;undefined
+sit on a bench;ngồi trên ghế;undefined
+bend over the table;cúi người trên bàn;undefined
+stand on the stage;đứng trên sân khấu;undefined
+lean against the wall;dựa vào tường;undefined
+lie on the floor;nằm trên sàn nhà;undefined
+coat;áo khoác;undefined
+wave;vẫy tay;undefined
+stack;xếp chồng lên, chất đống;undefined
+tableware;bộ đồ ăn;undefined
+job opening / vacancy;cơ hội việc làm;undefined
+transfer / relocate;chuyển công tác;undefined
+be qualified / eligible for;đủ năng lực, đủ điều kiện cho;undefined
+performance evaluation;bản đánh giá năng lực;undefined
+replacement / sustitute;người thay thế;undefined
+take a day off;nghỉ 1 ngày;undefined
+paid vacation;nghỉ được trả lương;undefined
+overtime pay;tiền ngoài giờ;undefined
+night shift;ca đêm;undefined
+severance package;gói trợ cấp thất nghiệp;undefined
+maternity leave;nghỉ thai sản;undefined
+take care of;quan tâm, chăm sóc;undefined
+reject;từ chối, bác bỏ;undefined
+approve;chấp thuận;undefined
+urgent;khẩn cấp;undefined
+counter;quầy;undefined
+railing;lan can, rào chắn;undefined
+pond;ao, hồ;undefined
+interviewee / interviewer;người được phỏng vấn / người phỏng vấn;undefined
+hallway;hành lang;undefined
+outlet;lối thoát;n
+contractor;nhà thầu, ngươi đấu thầu;n
+corkscrew;đồ khui rượu;n
+wrap;gói, bọc, quấn;v
+reimburse;hoàn lại, trả lại;v
+recruit;tuyển dụng (thêm nhân viên);v
+major;lớn, trọng đại, chủ yếu;adj
+platter;đĩa phẳng;n
+insufficient;không đủ, thiếu;adj
+brochure;tờ rơi quảng cáo;n
+convention;hội nghị, hiệp định, quy ước;n
+cruise;chuyến đi chơi trên biển;n
+out of range;ngoài phạm vi;n
+generous;hào phóng;adj
+declaration;lời tuyên bố, tuyên ngôn;n
+custom-made;làm theo đơn đặt hàng;n
+retirement;sự nghỉ hưu;n
+restruct;tái cấu trúc;v
+bankrupt;vỡ nợ, phá sản;adj
+plain;đơn giản, dễ hiểu;adj
+nature;bản chất, tự nhiên;n
+warp;làm cong;v
+antique;đồ cổ;n
+symphony;bản giao hưởng, nhạc giao hưởng;n
+suit;bộ com lê, trang phục; thích hợp, quen, hợp với;n
+conference;hội nghị, sự bàn bạc;n
+catalog;danh mục sản phẩm;n
+strike;đánh, đập, bãi công, đình công; cuộc bãi công, cuộc đình công;n
+plant;nhà máy;n
+folder;thư mục, kẹp tài liệu;n
+turn down;từ chối, bác bỏ;v
+deposit;tiền gửi, tiền đặt cọc; gửi, đặt cọc;v
+drastically;một cách quyết liệt, mạnh mẽ;adv
+severance pay;trợ cấp thôi việc;adv
+license;giấy phép;n
+by chance;tình cờ, ngẫu nhiên;n
+chilly;lạnh lẽo;adj
+sample;mẫu;n
+familiar;quen thuộc, thông thường;adj
+strange;xa lạ, kì lạ;adj
+sedan;xe ô tô mui kín;n
+get a lift with;đi nhờ xe ai đó;n
+receptionist;lễ tân, tiếp tân;n
+colleague;đồng nghiệp;n
+terminology;thuật ngữ;n
+outlet;lối thoát;n
+contractor;nhà thầu, ngươi đấu thầu;n
+corkscrew;đồ khui rượu;n
+wrap;gói, bọc, quấn;v
+reimburse;hoàn lại, trả lại;v
+recruit;tuyển dụng (thêm nhân viên);v
+major;lớn, trọng đại, chủ yếu;adj
+platter;đĩa phẳng;n
+insufficient;không đủ, thiếu;adj
+brochure;tờ rơi quảng cáo;n
+convention;hội nghị, hiệp định, quy ước;n

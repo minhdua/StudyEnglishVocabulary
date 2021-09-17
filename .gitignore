@@ -1,2 +1,4 @@
 /import
 /revision_web
+revision_web/data.js
+src/__pycache__/*

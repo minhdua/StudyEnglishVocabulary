@@ -1,32 +1,42 @@
 TOIECALUNIT08,Toiec A Listening Unit 8
-yes = sure = definitely = absolutely = certainly,có, chắc chắn rồi
-no = not at all = not this time = definitely not = certainly not = absolutely not,không đâu
-aisle,Lối đi giữa các dãy ghế
-vegeterian,ăn chay
-in charge of = responsible for,chịu trách nhiệm
-laboratory,phòng thí nghiệm
-vending machine,máy bán hàng tự động
-spacious,rộng rãi
-flier/flyer,tờ rơi quảng cáo
-look forward to Ving,mong đợi , mong chờ
-take care of,quan tâm, chăm sóc
-stay tuned,đừng chuyển kênh
-commercial break,thời gian quảng cáo
-temperature,nhiệt độ
-slippery,trơn trượt
-heat wave,đợt nóng
-road construction,xây dựng đường
-heavy traffic,giao thông đông đúc
-detour,đường vòng
-commuter,người đi vé tháng
-educational,có tính giáo dục
-handout,tài liệu phát tay
-inspector,thanh tra
-reschedule,đặt lại lịch
-crowded,đông đúc
-terrific,tuyệt vời
-rent,tiền thuê nhà
-reasonable,hợp lý, phải chăng
-on a diet,ăn kiêng
-downtown area,khu vực trung tâm
-correspondent,phóng viên
+yes = sure = definitely = absolutely = certainly;có, chắc chắn rồi;undefined
+no = not at all = not this time = definitely not = certainly not = absolutely not;không đâu;undefined
+aisle;Lối đi giữa các dãy ghế;undefined
+vegeterian;ăn chay;undefined
+in charge of = responsible for;chịu trách nhiệm;undefined
+laboratory;phòng thí nghiệm;undefined
+vending machine;máy bán hàng tự động;undefined
+spacious;rộng rãi;undefined
+flier/flyer;tờ rơi quảng cáo;undefined
+look forward to Ving;mong đợi , mong chờ;undefined
+take care of;quan tâm, chăm sóc;undefined
+stay tuned;đừng chuyển kênh;undefined
+commercial break;thời gian quảng cáo;undefined
+temperature;nhiệt độ;undefined
+slippery;trơn trượt;undefined
+heat wave;đợt nóng;undefined
+road construction;xây dựng đường;undefined
+heavy traffic;giao thông đông đúc;undefined
+detour;đường vòng;undefined
+commuter;người đi vé tháng;undefined
+educational;có tính giáo dục;undefined
+handout;tài liệu phát tay;undefined
+inspector;thanh tra;undefined
+reschedule;đặt lại lịch;undefined
+crowded;đông đúc;undefined
+terrific;tuyệt vời;undefined
+rent;tiền thuê nhà;undefined
+reasonable;hợp lý, phải chăng;undefined
+on a diet;ăn kiêng;undefined
+downtown area;khu vực trung tâm;undefined
+correspondent;phóng viên;undefined
+ham;thịt giăm bông;undefined
+urgent;gấp, khẩn cấp;adj
+employment agency;Công ty môi giới việc làm;adj
+orientation;sự định hướng;adj
+blueprint;bản kế hoạch chi tiết;n
+prototype;nguyên mẫu, vật mẫu đầu tiên;n
+release;phát hành, cấp phép;v
+patio;Hiên;v
+fire drill;diễn tập cứu hỏa;v
+avenue;đại lộ;v

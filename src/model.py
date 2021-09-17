@@ -146,7 +146,7 @@ class Synonymous(BaseModel):
 
 class Antonym(BaseModel):
     '''
-    this class is SynonymoAntonymus model
+    this class is Antonymus model
     '''
     def __init__(self,id=None, english=None, an_english=None, date_create=None, date_last_update=None):
         self.english=english
@@ -159,5 +159,23 @@ class Antonym(BaseModel):
                 self.id,
                 self.english,
                 self.an_english,
+                self.date_create,
+                self.date_last_update)
+
+class Spell(BaseModel):
+    '''
+    this class is Spell model
+    '''
+    def __init__(self,id=None, vowel=None, ipa=None, date_create=None, date_last_update=None):
+        self.vowel=vowel
+        self.ipa=ipa
+        super().__init__(id,date_create,date_last_update)
+
+    def __str__(self):
+        return '{0}; {1}; {2}; {3}; {4}'\
+            .format(
+                self.id,
+                self.vowel,
+                self.ipa,
                 self.date_create,
                 self.date_last_update)

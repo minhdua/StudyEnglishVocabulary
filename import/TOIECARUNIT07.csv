@@ -1,35 +1,84 @@
 ﻿TOIECARUNIT07,Toiec A Reading Unit 7
-engage,tham gia vào
-efficient,hiệu quả
-Be eligible for,có khả năng, tư cách làm gì
-Be subject to,chịu ảnh hưởng, phụ thuộc vào
-Be equivalent to,tương đương với
-Be aware of,nhận thức được
-Be fond of,thích
-Be similar to,tương tự như
-Be suitable for,phù hợp với
-Be famous for,nổi tiếng vì cái gì
-Be responsible for,chịu trách nhiệm về
-Be capable of,có khả năng làm gì
-Be exempt from,được miễn
-Be beneficial to,có lợi cho
-proper,đúng cách, thích hợp
-visible,có thể nhìn thấy
-head,hướng đến
-creative,sáng tạo
-necessitate,đòi hỏi, bắt buộc
-considerable,đáng kể
-symptom,triệu chứng
-reputation,danh tiếng
-vacuum cleaner,máy hút bụi
-frequently,thường xuyên
-reasonable,hợp lí
-prompt,nhanh chóng
-essential,cần thiết
-innovative,tân tiến, hiện đại
-remarkable,đáng kể, đáng chú ý
-packed with,đông đúc
-expansion,sự mở rộng
-publicize,công bố, công khai
-procedure,quy trình
-fare,tiền vé
+constraint;sự hạn chế,sự ràng buộc;n
+stretch of land;dải đất;undefined
+enhancement;sự tăng cường;n
+equivalence;tính tương đương;n
+consolation;sự an ủi, niềm an ủi;n
+contribution;sự đóng góp, sự góp phần;n
+pay tribute to;bày tỏ lòng kính trọng;undefined
+express appreciation;bày tỏ sự cảm kích;undefined
+proximity;sự lân cận, trạng thái gần;n
+setback;thất bại, trở ngại;n
+sự nói lưu loát, sự viết trôi chảy;undefined
+closure;.sự đóng cửa, sự kết thúc;n
+exposure;sự tiếp xúc, sự phơi nhiễm, sự phơi bày;n
+fragile;mong manh, dễ vỡ;adj
+reputation;danh tiếng, thương hiệu;n
+concentration;sự tập trung, nơi tập trung;n
+assumption;giả định, giả thuyết;n
+enrollment;tuyển sinh, sự ghi danh;n
+frequency;tần suất; tần số;n
+deal;sự thỏa thuận, phi vụ làm ăn;n
+petition;đơn yêu cầu, kiến nghị;n
+application;ứng dụng, đơn xin việc;n
+consistency;tính nhất quán, tính kiên định;n
+component;hợp thành, cấu thành;adj
+movement;sự chuyển động, sự hoạt động; cử động, động tác;n
+prediction;sự dự đoán;n
+obligation;nghĩa vụ, bổn phận, trách nhiệm;n
+indicate;cho biết; biểu thị, trình bày ngắn gọn;v
+in compliance with;tuân thủ;undefined
+designation;sự chỉ định, sự bổ nhiệm, thứ bậc...;n
+diversity;sự đa dạng, phong phú;n
+departure;sự rời khỏi, sự đi, sự khởi hành;n
+adjustment;sự điều chỉnh /sự điều chỉnh;n
+integration;sự hội nhập, sự hợp nhất;n
+occasion;dịp, cơ hội;n
+entrant;thí sinh;n
+regulation;sự điều chỉnh, điều lệ, quy tắc;n
+intensity;cường độ;n
+simplicity;sự đơn giản;n
+scheme;kế hoạch;n
+association;tổ chức, hiệp hội;n
+immigration;sự nhập cư, nhập cảnh;n
+expertise;kiến thức chuyên môn;n
+oversight;sự giám sát;n
+in compensation for;bồi thường cho;undefined
+telecommuting;làm việc từ xa;undefined
+in a tie;tỉ số hòa;undefined
+likewise;cũng vậy, tương tự như vậy;adv
+conversely;ngược lại;adv
+engage;tham gia vào;undefined
+efficient;hiệu quả;undefined
+Be eligible for;có khả năng, tư cách làm gì;undefined
+Be subject to;chịu ảnh hưởng, phụ thuộc vào;undefined
+Be equivalent to;tương đương với;undefined
+Be aware of;nhận thức được;undefined
+Be fond of;thích;undefined
+Be similar to;tương tự như;undefined
+Be suitable for;phù hợp với;undefined
+Be famous for;nổi tiếng vì cái gì;undefined
+Be responsible for;chịu trách nhiệm về;undefined
+Be capable of;có khả năng làm gì;undefined
+Be exempt from;được miễn;undefined
+Be beneficial to;có lợi cho;undefined
+proper;đúng cách, thích hợp;undefined
+visible;có thể nhìn thấy;undefined
+head;hướng đến;undefined
+creative;sáng tạo;undefined
+necessitate;đòi hỏi, bắt buộc;undefined
+considerable;đáng kể;undefined
+symptom;triệu chứng;undefined
+reputation;danh tiếng;undefined
+vacuum cleaner;máy hút bụi;undefined
+frequently;thường xuyên;undefined
+reasonable;hợp lí;undefined
+prompt;nhanh chóng;undefined
+essential;cần thiết;undefined
+innovative;tân tiến, hiện đại;undefined
+remarkable;đáng kể, đáng chú ý;undefined
+packed with;đông đúc;undefined
+expansion;sự mở rộng;undefined
+publicize;công bố, công khai;undefined
+procedure;quy trình;undefined
+fare;tiền vé;undefined

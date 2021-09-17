@@ -1,28 +1,43 @@
 TOIECALUNIT05,Toiec A Listening Unit 5
-seated,ngồi
-turn off,tắt
-line up,xếp hàng
-boarding pass,thẻ lên máy bay
-fountain,đài phun nước
-feed,cho ăn
-gather,thu thập, tập hợp
-waitress,bồi bàn nữ
-seed,hạt giống
-conduct,thực hiện, tiến hành
-handout,tài liệu phát tay
-be broken = malfuction = out of order = not work properly,hỏng hóc, trục trặc
-office supplies,văn phòng phẩm
-internet access,truy cập internet
-out of stock = no available,hết hàng
-cartridge,hộp mực
-cabinet,tủ
-statue,tượng
-monument,tượng đài
-jewelry,trang sức
-counter,quầy
-necklace,vòng cổ
-air conditioner,điều hòa
-switch,công tắc
-drop by,ghé qua
-coupon,phiếu giảm giá
-run out of,hết
+seated;ngồi;undefined
+turn off;tắt;undefined
+line up;xếp hàng;undefined
+boarding pass;thẻ lên máy bay;undefined
+fountain;đài phun nước;undefined
+feed;cho ăn;undefined
+gather;thu thập, tập hợp;undefined
+waitress;bồi bàn nữ;undefined
+seed;hạt giống;undefined
+conduct;thực hiện, tiến hành;undefined
+handout;tài liệu phát tay;undefined
+be broken = malfuction = out of order = not work properly;hỏng hóc, trục trặc;undefined
+office supplies;văn phòng phẩm;undefined
+internet access;truy cập internet;undefined
+out of stock = no available;hết hàng;undefined
+cartridge;hộp mực;undefined
+cabinet;tủ;undefined
+statue;tượng;undefined
+monument;tượng đài;undefined
+jewelry;trang sức;undefined
+counter;quầy;undefined
+necklace;vòng cổ;undefined
+air conditioner;điều hòa;undefined
+switch;công tắc;undefined
+drop by;ghé qua;undefined
+coupon;phiếu giảm giá;undefined
+run out of;hết;undefined
+turn down;từ chối, bác bỏ;v
+deposit;tiền gửi, tiền đặt cọc; gửi, đặt cọc;n-v
+drastically;một cách quyết liệt, mạnh mẽ;adv
+severance pay;trợ cấp thôi việc;adv
+license;giấy phép;n
+by chance;tình cờ, ngẫu nhiên;n
+chilly;lạnh lẽo;adj
+sample;mẫu;v-n
+familiar;quen thuộc, thông thường;adj
+strange;xa lạ, kì lạ;adj
+sedan;xe ô tô mui kín;n
+get a lift with;đi nhờ xe ai đó;n
+receptionist;lễ tân, tiếp tân;n
+colleague;đồng nghiệp;n
+terminology;thuật ngữ;n

@@ -13,6 +13,7 @@ class Menu(object):
         self.info_display = get_or_default(info_display,InforMenu())
         self.options = get_or_default(options,[])
         self.commands = get_or_default(commands,CommandList())
+        self.auto_next_flag = False
         self.item_size = 0
         self.input = -1
         self.user_input=''
@@ -49,8 +50,11 @@ class Menu(object):
             self.process_custom()
 
     def print_error(self,message):
-        print(high_light(message,Color.RED2),"Enter ...")
-        input()
+        if(message != ""):
+            self.beep()
+            input(high_light(message,Color.RED2)+"\nEnter to continue...")
+
+        
 
     def process_option(self):
         self.current_option.processing()
@@ -73,8 +77,8 @@ class Menu(object):
 
     def show_input_user(self):
         if(self.user_input != ''):
-            self.beep()
             print(high_light(self.user_input,Color.RED2))
+            self.beep()
 
     def start(self):
         while(not self.exit_flag):
